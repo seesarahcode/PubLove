@@ -5,22 +5,31 @@ gem 'rails', '4.1.8'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use HAML for HTML
-gem "haml-rails", "~> 0.9"
+gem 'haml-rails', '~> 0.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-group :test do 
-	gem 'rspec-rails', '2.14.1'
+group :development, :test do 
+	gem 'rspec-rails'
 	gem 'simplecov'
 	gem 'rubocop', require: false
+	gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+	gem 'better_errors'
+	gem 'binding_of_caller'
+	gem 'spork'
+	gem 'selenium-webdriver', '2.35.1'
+	gem 'capybara'
+	gem 'factory_girl_rails', '4.2.0'
+	gem 'faker', '1.1.2'
 end
 
 gem 'awesome_print'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails'				# Use jquery as the JavaScript library
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
