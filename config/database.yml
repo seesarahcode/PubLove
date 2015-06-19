@@ -14,22 +14,35 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  default: &default
+    adapter: postgresql
+    encoding: unicode
+    # For details on connection pooling, see rails configuration guide
+    # http://guides.rubyonrails.org/configuring.html#database-pooling
+    pool: 5
 
-development:
-  <<: *default
-  database: Bibliateq_development
+  development:
+     database: Bibliateq_development
+     <<: *default
+
+  test: &test
+     database: Bibliateq_test
+     <<: *default
+
+  production:
+     database: Bibliateq_production
+     <<: *default
+
+  cucumber:
+     database: cucumber
+     <<: *default
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: Bibliateq
+  #username: Riverpen
 
   # The password associated with the postgres role (username).
   #password:
@@ -55,7 +68,7 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: &test
   <<: *default
   database: Bibliateq_test
 
@@ -83,3 +96,6 @@ production:
   database: Bibliateq_production
   username: Bibliateq
   password: <%= ENV['BIBLIATEQ_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test

@@ -12,7 +12,7 @@ describe BooksController do
     describe "GET /index" do 
       it "should return all books" do 
         get :index
-        #@body = JSON.parse(response.body)   
+        ap response.body 
         expect(response.status).to eq 200
       end 
     end
