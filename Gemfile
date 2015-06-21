@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do 
+	gem 'database_cleaner'
 	gem 'rspec-rails'
 	gem 'simplecov'
 	gem 'rubocop', require: false

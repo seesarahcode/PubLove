@@ -159,8 +159,8 @@
         1,
         1,
         1,
-        31,
-        31,
+        44,
+        44,
         1,
         null,
         null
@@ -315,11 +315,46 @@
         1,
         null
       ],
+      "/Users/sarah/Bibliateq/spec/models/books_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/sarah/Bibliateq/app/models/book.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1434775642
+    "timestamp": 1434859977
   }
 }
