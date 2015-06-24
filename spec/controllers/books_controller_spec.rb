@@ -52,6 +52,15 @@ describe BooksController do
         end
       end
       context "with invalid parameters" do
+        before :each do 
+          post :create, book: { title: "", isbn: nil, pub_year: nil}
+        end
+        it "should respond with an error" do
+          expect(response.status).to eq 422
+        end
+        it "should show a flash message" do
+          expect(flash[:notice]).to match(/^Book could not be created./)
+        end
       end
     end
 
@@ -84,13 +93,12 @@ describe BooksController do
         end
       end
       context "with invalid parameters" do
-        before :each do 
-          @book = FactoryGirl.create(:book)
-          get :update, id: @book.id, book: {:title => "Baby Now We Got Bad Titles", 
-          :pub_year => "" }
+        before :each do
+          patch :update, id: @book.id, book: {:title => "Baby Now We Got Bad Titles", 
+          :pub_year => nil }
         end
         it "should respond with an error" do
-          expect(response.status).to eq 400
+          expect(response.status).to eq 422
         end
         it "should render the edit template" do
           response.should render_template(:edit)
