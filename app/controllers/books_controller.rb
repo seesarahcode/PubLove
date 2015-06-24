@@ -10,6 +10,7 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @book = Book.find(params[:id])
   end
 
   # GET /books/new
@@ -44,7 +45,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
       else
-        format.html { render :edit }
+        format.html { render :edit, notice: 'Book could not be updated.' }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
