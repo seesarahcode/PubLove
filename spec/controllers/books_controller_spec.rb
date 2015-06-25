@@ -38,11 +38,15 @@ describe BooksController do
     describe "POST /create" do
       context "with valid parameters" do
         before :each do 
+          @book_count = Book.all.count
           post :create, book: {:title => "Harry Potter and the Chamber of Open Secrets", 
             :isbn => "#{rand(10 ** 13)}", :pub_year => 2015}
         end
         it "should respond with success" do
           expect(response.status).to eq 302
+        end
+        it "should create a new book object" do
+          Book.all.count.should eq (@book_count + 1)
         end
         it "should redirect to the new book page" do
           response.should redirect_to(Book.last)
@@ -53,6 +57,7 @@ describe BooksController do
       end
       context "with invalid parameters" do
         before :each do 
+          @book_count = Book.all.count
           post :create, book: { title: "", isbn: nil, pub_year: nil}
         end
         it "should respond with an error" do
@@ -60,6 +65,9 @@ describe BooksController do
         end
         it "should show a flash message" do
           expect(flash[:notice]).to match(/^Book could not be created./)
+        end
+        it "should not create a new book object" do
+          Book.all.count.should eq @book_count
         end
       end
     end
