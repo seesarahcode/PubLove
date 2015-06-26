@@ -37,7 +37,7 @@ describe "User sign up" do
 	    page.should have_content("1 error")
 		end
 		it "should not allow users to register with an existing email address" do 
-			FactoryGirl.create(:user, email: "mrsimon@schuster.com", password: "password" )
+			FactoryGirl.create(:user, email: "mrsimon@schuster.com", password: "password", role: "admin" )
 			visit new_user_registration_path
 	    fill_in "Email",                 :with => "mrsimon@schuster.com"
 	    fill_in "Password",              :with => "$uperscript"
@@ -51,11 +51,12 @@ end
 describe "User sign in" do
 	before :each do
 		@user = User.create(email: "random@house.com", password: "b00kworm",
-													password_confirmation: "b00kworm")
+													password_confirmation: "b00kworm", role: "admin")
 		visit new_user_session_path
 	end
 	context "with valid information" do
 		it "allows existing users to sign in with correct info" do
+	    visit new_user_session_path
 	    fill_in "Email",                 :with => @user.email
 	    fill_in "Password",              :with => @user.password
 	    click_button "Log in"
@@ -82,7 +83,7 @@ describe "User sign out" do
 	context "while logged in" do
 		it "should destroy the current user's session" do
 			@user = User.create(email: "random@house.com", password: "b00kworm",
-													password_confirmation: "b00kworm")
+													password_confirmation: "b00kworm", role: "admin")
 			login(@user)
 			visit root_path
 			page.should have_content
