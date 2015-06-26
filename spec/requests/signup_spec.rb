@@ -81,7 +81,9 @@ end
 describe "User sign out" do
 	context "while logged in" do
 		it "should destroy the current user's session" do
-			valid_user_is_signed_in
+			@user = User.create(email: "random@house.com", password: "b00kworm",
+													password_confirmation: "b00kworm")
+			login(@user)
 			visit root_path
 			page.should have_content
 			click_link "Log Out"

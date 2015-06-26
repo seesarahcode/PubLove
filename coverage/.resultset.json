@@ -534,8 +534,6 @@
         1,
         null,
         1,
-        null,
-        1,
         1,
         1,
         1,
@@ -640,7 +638,22 @@
         null
       ],
       "/Users/sarah/Bibliateq/spec/controllers/home_controller_spec.rb": [
-
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/sarah/Bibliateq/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null
       ],
       "/Users/sarah/Bibliateq/spec/models/books_spec.rb": [
         1,
@@ -796,21 +809,17 @@
         1,
         1,
         1,
+        null,
+        1,
         1,
         1,
         1,
         1,
         null,
-        null,
-        null
-      ],
-      "/Users/sarah/Bibliateq/app/controllers/home_controller.rb": [
-        1,
-        1,
         null,
         null
       ]
     },
-    "timestamp": 1435292041
+    "timestamp": 1435296142
   }
 }
