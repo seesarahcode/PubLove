@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @publisher.name
+%p
+  %b Street:
+  = @publisher.street
+%p
+  %b State:
+  = @publisher.state
+%p
+  %b City:
+  = @publisher.city
+%p
+  %b Zip:
+  = @publisher.zip
+%p
+  %b Phone:
+  = @publisher.phone
+%p
+  %b Website:
+  = @publisher.website
+
+= link_to 'Edit', edit_publisher_path(@publisher)
+\|
+= link_to 'Back', publishers_path
