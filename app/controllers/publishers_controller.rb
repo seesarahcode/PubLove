@@ -22,18 +22,39 @@ class PublishersController < ApplicationController
 
   def create
     @publisher = Publisher.new(publisher_params)
-    @publisher.save
-    respond_with(@publisher)
+    if @publisher.save
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Publisher was successfully created."
+          redirect_to @publisher
+        end
+      end
+    else
+      flash[:notice] = "Publisher could not be created."
+      render :new, status: :unprocessable_entity 
+    end
   end
 
   def update
-    @publisher.update(publisher_params)
-    respond_with(@publisher)
+    respond_to do |format|
+      if @publisher.update(publisher_params)
+        format.html { redirect_to @publisher, notice: 'Publisher was successfully updated.' }
+        format.json { render :show, status: :ok, location: @publisher }
+      else
+        format.html do
+          flash[:notice] = "Publisher could not be updated."
+          render :edit, status: :unprocessable_entity 
+        end
+        format.json { render json: @publisher.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
-    @publisher.destroy
-    respond_with(@publisher)
+    if @publisher.destroy
+      redirect_to root_path
+      flash[:notice] = "Your publisher account was deleted."
+    end
   end
 
   private
