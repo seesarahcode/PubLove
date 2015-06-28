@@ -25,7 +25,7 @@ group :development, :test do
 	gem 'spork'
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara'
-	gem 'factory_girl_rails', '4.2.0'
+	gem 'factory_girl_rails', require: false
 	gem 'faker', '1.1.2'
 end
 

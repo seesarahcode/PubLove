@@ -237,7 +237,7 @@ DEPENDENCIES
   capybara
   database_cleaner
   devise
-  factory_girl_rails (= 4.2.0)
+  factory_girl_rails
   faker (= 1.1.2)
   haml-rails (~> 0.9)
   jbuilder (~> 2.0)
