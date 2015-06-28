@@ -25,12 +25,14 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
-    @book = Book.new(book_params)
-    respond_to do |format|
-      if @book.save
+    @book = Book.new(book_params) 
+    if @book.save
+      respond_to do |format|
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
-      else
+      end
+    else
+      respond_to do |format|
         format.html do
           flash[:notice] = "Book could not be created."
           render :new, status: :unprocessable_entity 

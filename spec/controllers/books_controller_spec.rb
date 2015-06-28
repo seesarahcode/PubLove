@@ -69,6 +69,9 @@ describe BooksController do
         it "should not create a new book object" do
           Book.all.count.should eq @book_count
         end
+        it "should render the new page again" do
+          response.should render_template(:new)
+        end
       end
     end
 
@@ -88,7 +91,7 @@ describe BooksController do
     describe "PUT /update" do
       context "with valid parameters" do
         before :each do
-          get :update, id: @book.id, book: {:title => "Hermione Granger and the Goblet of Awesome"}
+          put :update, id: @book.id, book: {:title => "Hermione Granger and the Goblet of Awesome"}
         end
         it "should respond with success" do
           expect(response.status).to eq 302
@@ -102,7 +105,7 @@ describe BooksController do
       end
       context "with invalid parameters" do
         before :each do
-          patch :update, id: @book.id, book: {:title => "Baby Now We Got Bad Titles", 
+          put :update, id: @book.id, book: {:title => "Baby Now We Got Bad Titles", 
           :pub_year => nil }
         end
         it "should respond with an error" do
