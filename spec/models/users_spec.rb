@@ -66,6 +66,7 @@ describe User do
 			@admin.is_pm?.should eq false
 		end
 	end
+	
 	describe "#is_author?" do
 		it "should return true if the user is an author" do
 			@author = FactoryGirl.create(:author)

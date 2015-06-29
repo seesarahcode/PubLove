@@ -1,29 +1,27 @@
 FactoryGirl.define do
-  factory :project_manager, class: User do
-    sequence(:email) { |n| "editor#{rand(10)}@lilpub.com" }
+  factory :user do
+    sequence(:email) { |n| "editor#{rand(100)}@lilpub.com" }
     password 'password'
     password_confirmation { |u| u.password }
-    role "project_manager"
-  end
 
-  factory :super_admin, class: User do
-    sequence(:email) { |n| "sarah@bookward.com" }
-    password 'password'
-    password_confirmation { |u| u.password }
-    role "super_admin"
-  end
+    factory :super_admin do
+      role "super_admin"
+    end
 
-  factory :admin, class: User do
-    sequence(:email) { |n| "editor#{rand(10)}@lilpub.com" }
-    password 'password'
-    password_confirmation { |u| u.password }
-    role "admin"
-  end
-  factory :author, class: User do
-    sequence(:email) { |n| "editor#{rand(10)}@lilpub.com" }
-    password 'password'
-    password_confirmation { |u| u.password }
-    role "author"
+    factory :project_manager do
+      role "project_manager"
+      sequence(:publisher_id) {|n| n }
+    end
+
+    factory :admin do
+      role "admin"
+      sequence(:publisher_id) {|n| n }
+    end
+
+    factory :author do
+      role "author"
+      sequence(:publisher_id) {|n| n }
+    end
   end
 end
 
