@@ -33,9 +33,12 @@ end
 describe "User sign out" do
 	context "while logged in" do
 		it "should destroy the current user's session" do
-			@user = FactoryGirl.create(:admin)
-			login(@user)
-			visit root_path
+			@user = FactoryGirl.create(:project_manager)
+			visit new_user_session_path
+	    fill_in "Email",                 :with => @user.email
+	    fill_in "Password",              :with => @user.password
+	    click_button "Log in"
+	    visit root_path
 			click_link "Log Out"
 			page.should have_content("Signed out successfully.")
 		end
