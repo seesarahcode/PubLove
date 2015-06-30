@@ -2,8 +2,7 @@ require 'spec_helper'
 
 describe "User sign in" do
 	before :each do
-		@user = User.create(email: "random@house.com", password: "b00kworm",
-													password_confirmation: "b00kworm", role: "admin")
+		@user = FactoryGirl.create(:admin)
 		visit new_user_session_path
 	end
 	context "with valid information" do
@@ -34,11 +33,9 @@ end
 describe "User sign out" do
 	context "while logged in" do
 		it "should destroy the current user's session" do
-			@user = User.create(email: "random@house.com", password: "b00kworm",
-													password_confirmation: "b00kworm", role: "admin")
+			@user = FactoryGirl.create(:admin)
 			login(@user)
 			visit root_path
-			page.should have_content
 			click_link "Log Out"
 			page.should have_content("Signed out successfully.")
 		end
