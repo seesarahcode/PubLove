@@ -2,12 +2,12 @@
 
 FactoryGirl.define do
   factory :publisher do 
-    name "Booksly & Wordwood"
-    street "888 Globe Stage Place"
-    state "Washington"
-    city "Seattle"
-    zip 92527
-    phone "800-555-4893"
-    website "www.bookslyandwordwood.com"
+    name 					"Booksly & #{Faker::Company.name} Publishing"
+    street 				Faker::Address.street_address
+    state 				Faker::Address.state
+    city 					Faker::Address.city
+    zip 					92527
+    phone 				Faker::PhoneNumber.phone_number
+    website 			"www.bookslyandwordwood.com"
   end
 end

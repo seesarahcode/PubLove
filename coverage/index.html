@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-06-30T23:10:04-05:00">2015-06-30T23:10:04-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-01T00:16:07-05:00">2015-07-01T00:16:07-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.4
+         2.37
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>44</b> files in total.
-    <b>546</b> relevant lines. 
-    <span class="green"><b>546</b> lines covered</span> and
+    <b>548</b> relevant lines. 
+    <span class="green"><b>548</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -353,11 +353,11 @@
       <tr>
         <td class="strong"><a href="#6de5ab7a7c2a3c40a764f1b5fc04a83605b5b549" class="src_link" title="spec/factories/users.rb">spec/factories/users.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
-        <td>16</td>
-        <td>16</td>
+        <td>29</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>4.0</td>
       </tr>
       
       <tr>
@@ -6295,43 +6295,43 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    name &quot;Booksly &amp; Wordwood&quot;</code>
+          <code class="ruby">    name 					&quot;Booksly &amp; #{Faker::Company.name} Publishing&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    street &quot;888 Globe Stage Place&quot;</code>
+          <code class="ruby">    street 				Faker::Address.street_address</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    state &quot;Washington&quot;</code>
+          <code class="ruby">    state 				Faker::Address.state</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    city &quot;Seattle&quot;</code>
+          <code class="ruby">    city 					Faker::Address.city</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    zip 92527</code>
+          <code class="ruby">    zip 					92527</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    phone &quot;800-555-4893&quot;</code>
+          <code class="ruby">    phone 				Faker::PhoneNumber.phone_number</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    website &quot;www.bookslyandwordwood.com&quot;</code>
+          <code class="ruby">    website 			&quot;www.bookslyandwordwood.com&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -6355,8 +6355,8 @@
     <h3>spec/factories/users.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6376,151 +6376,163 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="3">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          <code class="ruby">    sequence(:email) { |n| &quot;editor#{rand(100)}@lilpub.com&quot; }</code>
+          <code class="ruby">    email       Faker::Internet.email</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">    password &#39;password&#39;</code>
+          <code class="ruby">    first_name  Faker::Name.first_name</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    last_name   Faker::Name.last_name</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    password    &#39;password&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="30" data-linenumber="7">
           <span class="hits">30</span>
           
           <code class="ruby">    password_confirmation { |u| u.password }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">    factory :super_admin do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">      role &quot;super_admin&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    factory :project_manager do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">      role &quot;project_manager&quot;</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="13">
+        <li class="covered" data-hits="20" data-linenumber="15">
           <span class="hits">20</span>
           
           <code class="ruby">      sequence(:publisher_id) {|n| n }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">    factory :admin do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">      role &quot;admin&quot;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="18">
+        <li class="covered" data-hits="6" data-linenumber="20">
           <span class="hits">6</span>
           
           <code class="ruby">      sequence(:publisher_id) {|n| n }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">    factory :author do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">      role &quot;author&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="23">
+        <li class="covered" data-hits="2" data-linenumber="25">
           <span class="hits">2</span>
           
           <code class="ruby">      sequence(:publisher_id) {|n| n }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby"></code>

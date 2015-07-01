@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :user do
-    sequence(:email) { |n| "editor#{rand(100)}@lilpub.com" }
-    password 'password'
+    email       Faker::Internet.email
+    first_name  Faker::Name.first_name
+    last_name   Faker::Name.last_name
+    password    'password'
     password_confirmation { |u| u.password }
 
     factory :super_admin do
