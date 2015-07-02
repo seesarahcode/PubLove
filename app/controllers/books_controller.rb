@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /books
   # GET /books.json
   def index
@@ -75,8 +75,12 @@ class BooksController < ApplicationController
       @book = Book.find(params[:id])
     end
 
+    def set_publisher
+      @publisher = Publisher.find(params[:publisher_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :isbn, :sku, :pub_year)
+      params.require(:book).permit(:title, :isbn, :sku, :pub_year, :publisher_id)
     end
 end

@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Book do 
 
 	before do 
-		@book = FactoryGirl.create(:book)
+		pub = FactoryGirl.create(:publisher)
+		@book = FactoryGirl.create(:book, :publisher_id => pub.id)
 	end
 
 	describe "responses" do 
@@ -12,6 +13,7 @@ describe Book do
 		it { should respond_to(:isbn) }
 		it { should respond_to(:sku) }
 		it { should respond_to(:pub_year) }
+		it { should respond_to(:publisher) }
 	  it { should be_valid }
 	end
 
@@ -23,6 +25,18 @@ describe Book do
 		it "should not be valid without a pub year" do
 			@book.pub_year = ""
 			@book.should_not be_valid
+		end
+		it "should not be valid without a publisher" do
+			@book.publisher = nil
+			@book.should_not be_valid
+		end
+	end
+
+	describe "associations" do
+		context "to publisher" do
+			it "should have a publisher_id" do
+				@book.publisher.should be_a_kind_of(Publisher)
+			end
 		end
 	end
 

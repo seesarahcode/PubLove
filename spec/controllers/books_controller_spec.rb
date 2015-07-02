@@ -3,8 +3,9 @@ require 'spec_helper'
 describe BooksController do 
   
   before(:each) do
-    @book = FactoryGirl.create(:book)
-    5.times { FactoryGirl.create(:book) }
+    @pub = FactoryGirl.create(:publisher)
+    @book = FactoryGirl.create(:book, :publisher_id => @pub.id)
+    5.times { FactoryGirl.create(:book, :publisher_id => @pub.id) }
   end
 
     describe "GET /index" do 
@@ -40,7 +41,7 @@ describe BooksController do
         before :each do 
           @book_count = Book.all.count
           post :create, book: {:title => "Harry Potter and the Chamber of Open Secrets", 
-            :isbn => "#{rand(10 ** 13)}", :pub_year => 2015}
+            :isbn => "#{rand(10 ** 13)}", :pub_year => 2015, :publisher => @pub}
         end
         it "should respond with success" do
           expect(response.status).to eq 302
@@ -58,7 +59,7 @@ describe BooksController do
       context "with invalid parameters" do
         before :each do 
           @book_count = Book.all.count
-          post :create, book: { title: "", isbn: nil, pub_year: nil}
+          post :create, book: { title: "", isbn: nil, pub_year: nil, publisher_id: nil}
         end
         it "should respond with an error" do
           expect(response.status).to eq 422
