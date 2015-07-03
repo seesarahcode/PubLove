@@ -37,6 +37,8 @@ describe Book do
 			it "should have a publisher_id" do
 				@book.publisher.should be_a_kind_of(Publisher)
 			end
+			it "should be included in the results for publisher.books" do
+			end
 		end
 	end
 
