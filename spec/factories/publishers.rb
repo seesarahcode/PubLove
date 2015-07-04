@@ -9,11 +9,5 @@ FactoryGirl.define do
     zip 					92527
     phone 				Faker::PhoneNumber.phone_number
     website 			"www.bookslyandwordwood.com"
-
-    factory :publisher_with_book do
-	    after(:create) do |book|
-	      create(:book, publisher: publisher)
-	    end
-	  end
   end
 end

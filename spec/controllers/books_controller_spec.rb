@@ -4,6 +4,7 @@ describe BooksController do
   
   before(:each) do
     @pub = FactoryGirl.create(:publisher)
+    sign_in(FactoryGirl.create(:project_manager, :publisher_id => @pub.id))
     @book = FactoryGirl.create(:book, :publisher_id => @pub.id)
     5.times { FactoryGirl.create(:book, :publisher_id => @pub.id) }
   end
