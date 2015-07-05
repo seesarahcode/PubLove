@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Book do 
 
 	before do 
-		pub = FactoryGirl.create(:publisher)
-		@book = FactoryGirl.create(:book, :publisher_id => pub.id)
+		@pub = FactoryGirl.create(:publisher)
+		@book = FactoryGirl.create(:book, :publisher_id => @pub.id)
 	end
 
 	describe "responses" do 
@@ -38,6 +38,8 @@ describe Book do
 				@book.publisher.should be_a_kind_of(Publisher)
 			end
 			it "should be included in the results for publisher.books" do
+				@pub.books.should_not be_nil
+				@pub.books.first.id.should eq @book.id
 			end
 		end
 	end
