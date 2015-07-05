@@ -27,6 +27,7 @@ group :development, :test do
 	gem 'capybara'
 	gem 'factory_girl_rails', require: false
 	gem 'faker', '1.1.2'
+	gem 'launchy'
 end
 
 gem 'awesome_print'

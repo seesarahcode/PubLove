@@ -18,4 +18,17 @@ class ApplicationController < ActionController::Base
       end
     end
 
+    def after_sign_in_path_for(resource)
+      case current_user.role
+      when "super_admin"
+        super_admin_dashboard_path
+      when "admin"
+        admin_dashboard_path
+      when "project_manager"
+        pm_dashboard_path
+      when "author"
+        author_dashboard_path
+      end
+    end
+
 end

@@ -38,7 +38,6 @@ describe "User sign out" do
 	    fill_in "Email",                 :with => @user.email
 	    fill_in "Password",              :with => @user.password
 	    click_button "Log in"
-	    visit root_path
 			click_link "Log Out"
 			page.should have_content("Signed out successfully.")
 		end
