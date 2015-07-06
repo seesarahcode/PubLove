@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @user_profile.user_id
+%p
+  %b Publisher:
+  = @user_profile.publisher_id
+%p
+  %b Title:
+  = @user_profile.title
+%p
+  %b Start date:
+  = @user_profile.start_date
+%p
+  %b Bio:
+  = @user_profile.bio
+%p
+  %b Favorite books:
+  = @user_profile.favorite_books
+%p
+  %b Phone:
+  = @user_profile.phone
+
+= link_to 'Edit', edit_user_profile_path(@user_profile)
+\|
+= link_to 'Back', user_profiles_path
