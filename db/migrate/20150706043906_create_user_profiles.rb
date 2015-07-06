@@ -1,7 +1,7 @@
 class CreateUserProfiles < ActiveRecord::Migration
   def change
     create_table :user_profiles do |t|
-      t.integer :user_id
+      t.belongs_to :user, index: true
       t.integer :publisher_id
       t.string :title
       t.date :start_date

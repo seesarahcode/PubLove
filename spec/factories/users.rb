@@ -5,6 +5,7 @@ FactoryGirl.define do
     last_name   Faker::Name.last_name
     password    'password'
     password_confirmation { |u| u.password }
+    association :profile, factory: :user_profile
 
     factory :super_admin do
       email       Faker::Internet.email

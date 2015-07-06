@@ -19,10 +19,10 @@ describe "User sign in" do
 	    page.should have_css('#admin-dash')
 		end
 		it "should send super_admins to the super_admin dashboard" do
-			@super_admin = FactoryGirl.create(:super_admin)
+			super_admin = FactoryGirl.create(:super_admin)
 			visit new_user_session_path
-	    fill_in "Email",                 :with => @super_admin.email
-	    fill_in "Password",              :with => @super_admin.password
+	    fill_in "Email",                 :with => super_admin.email
+	    fill_in "Password",              :with => super_admin.password
 	    click_button "Log in"
 	    page.should have_css('#super-admin-dash')
 		end

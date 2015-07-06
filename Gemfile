@@ -26,7 +26,7 @@ group :development, :test do
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara'
 	gem 'factory_girl_rails', require: false
-	gem 'faker', '1.1.2'
+	gem 'faker', '1.4.3'
 	gem 'launchy'
 end
 

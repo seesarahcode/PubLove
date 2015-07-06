@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
+
   validates :role, presence: true
 
   def is_super_admin?
