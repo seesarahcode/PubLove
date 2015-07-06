@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   resources :books
   resources :publishers
 
-  get 'dashboard/', to: 'dashboard#super_admin', as: 'super_admin_dashboard'
-  get 'dashboard/', to: 'dashboard#admin', as: 'admin_dashboard'
-  get 'dashboard/', to: 'dashboard#pm', as: 'pm_dashboard'
-  get 'dashboard/', to: 'dashboard#author', as: 'author_dashboard'
+  get 'admin/dashboard/', to: 'dashboard#admin', as: 'admin_dashboard'
+  get 'super/dashboard/', to: 'dashboard#super_admin', as: 'super_admin_dashboard'
+  get 'pm/dashboard/', to: 'dashboard#pm', as: 'pm_dashboard'
+  get 'author/dashboard/', to: 'dashboard#author', as: 'author_dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

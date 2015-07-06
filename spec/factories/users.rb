@@ -7,20 +7,24 @@ FactoryGirl.define do
     password_confirmation { |u| u.password }
 
     factory :super_admin do
+      email       Faker::Internet.email
       role "super_admin"
     end
 
     factory :project_manager do
+      email       Faker::Internet.email
       role "project_manager"
       sequence(:publisher_id) {|n| n }
     end
 
     factory :admin do
+      email       Faker::Internet.email
       role "admin"
       sequence(:publisher_id) {|n| n }
     end
 
     factory :author do
+      email       Faker::Internet.email
       role "author"
       sequence(:publisher_id) {|n| n }
     end
