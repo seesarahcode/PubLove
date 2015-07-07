@@ -40,11 +40,16 @@ describe User do
 	end
 
 	describe "#create_profile" do
+		before do
+			@up_count = UserProfile.all.count
+		end
 		it "should create a UserProfile after creating a user" do 
-
+			FactoryGirl.create(:project_manager)
+			UserProfile.all.count.should eq @up_count + 1
 		end
 		it "should create a UserProfile with right user_id" do
-
+			user = FactoryGirl.create(:project_manager)
+			UserProfile.last.user_id.should eq user.id
 		end
 	end
 

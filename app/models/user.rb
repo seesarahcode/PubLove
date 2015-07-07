@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	# roles: super_admin, admin, project_manager, author
+  
   after_create :create_profile
 
   # Include default devise modules. Others available are:
@@ -28,6 +29,7 @@ class User < ActiveRecord::Base
   end
 
   def create_profile
+    self.publisher_id.present? ? UserProfile.create(user_id: self.id, publisher_id: self.publisher_id) : UserProfile.create(user_id: self.id)
   end
 
 end

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-06T21:16:36-05:00">2015-07-06T21:16:36-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-06T23:20:40-05:00">2015-07-06T23:20:40-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.17
+         3.27
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>50</b> files in total.
-    <b>774</b> relevant lines. 
-    <span class="green"><b>774</b> lines covered</span> and
+    <b>786</b> relevant lines. 
+    <span class="green"><b>786</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -193,11 +193,11 @@
       <tr>
         <td class="strong"><a href="#ec7d60b05900c45bd77c43766a39dcf4c568c69b" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>29</td>
-        <td>12</td>
-        <td>12</td>
+        <td>35</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>7.1</td>
       </tr>
       
       <tr>
@@ -437,7 +437,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>9.8</td>
+        <td>10.3</td>
       </tr>
       
       <tr>
@@ -483,9 +483,9 @@
       <tr>
         <td class="strong"><a href="#e0dd683be2294a88abd8cb59811209f611c53b02" class="src_link" title="spec/models/users_spec.rb">spec/models/users_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>81</td>
-        <td>50</td>
-        <td>50</td>
+        <td>95</td>
+        <td>59</td>
+        <td>59</td>
         <td>0</td>
         <td>1.5</td>
       </tr>
@@ -537,7 +537,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>51.3</td>
+        <td>52.0</td>
       </tr>
       
       <tr>
@@ -2599,8 +2599,8 @@
     <h3>app/models/user.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2623,43 +2623,43 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # Include default devise modules. Others available are:</code>
+          <code class="ruby">  after_create :create_profile</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">  # :confirmable, :lockable, :timeoutable and :omniauthable</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">  devise :database_authenticatable, :registerable,</code>
+          
+          <code class="ruby">  # Include default devise modules. Others available are:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">         :recoverable, :rememberable, :trackable, :validatable</code>
+          <code class="ruby">  # :confirmable, :lockable, :timeoutable and :omniauthable</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_one :profile, class_name: &quot;UserProfile&quot;, foreign_key: &quot;user_id&quot;</code>
+          <code class="ruby">  devise :database_authenticatable, :registerable,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">         :recoverable, :rememberable, :trackable, :validatable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -2671,7 +2671,7 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :role, presence: true</code>
+          <code class="ruby">  has_one :profile, class_name: &quot;UserProfile&quot;, foreign_key: &quot;user_id&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -2683,100 +2683,136 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
+          <code class="ruby">  validates :role, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def is_super_admin?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
+        <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
           <code class="ruby">  	self.role == &quot;super_admin&quot; ? true : false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_admin?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
+        <li class="covered" data-hits="2" data-linenumber="20">
           <span class="hits">2</span>
           
           <code class="ruby">  	self.role == &quot;admin&quot; ? true : false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_pm?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
+        <li class="covered" data-hits="2" data-linenumber="24">
           <span class="hits">2</span>
           
           <code class="ruby">  	self.role == &quot;project_manager&quot; ? true : false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_author?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="26">
+        <li class="covered" data-hits="2" data-linenumber="28">
           <span class="hits">2</span>
           
           <code class="ruby">  	self.role == &quot;author&quot; ? true : false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create_profile</code>
+        </li>
+      
+        <li class="covered" data-hits="88" data-linenumber="32">
+          <span class="hits">88</span>
+          
+          <code class="ruby">    self.publisher_id.present? ? UserProfile.create(user_id: self.id, publisher_id: self.publisher_id) : UserProfile.create(user_id: self.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
@@ -8554,14 +8590,14 @@
           <code class="ruby">    password    &#39;password&#39;</code>
         </li>
       
-        <li class="covered" data-hits="84" data-linenumber="7">
-          <span class="hits">84</span>
+        <li class="covered" data-hits="88" data-linenumber="7">
+          <span class="hits">88</span>
           
           <code class="ruby">    password_confirmation { |u| u.password }</code>
         </li>
       
-        <li class="covered" data-hits="58" data-linenumber="8">
-          <span class="hits">58</span>
+        <li class="covered" data-hits="62" data-linenumber="8">
+          <span class="hits">62</span>
           
           <code class="ruby">    sequence(:publisher_id) {|n| n }</code>
         </li>
@@ -9517,7 +9553,7 @@
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">		#it { should respond_to(:birthday) }</code>
+          <code class="ruby">		# it { should respond_to(:birthday) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -9643,8 +9679,8 @@
     <h3>spec/models/users_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>50</b> relevant lines. 
-      <span class="green"><b>50</b> lines covered</span> and
+      <b>59</b> relevant lines. 
+      <span class="green"><b>59</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -9676,8 +9712,8 @@
           <code class="ruby">	before do </code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
           
           <code class="ruby">		@user = FactoryGirl.create(:project_manager, </code>
         </li>
@@ -9901,43 +9937,43 @@
         <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">	describe &quot;#is_super_admin?&quot; do</code>
+          <code class="ruby">	describe &quot;#create_profile&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">		it &quot;should return true if the user is a super_admin&quot; do</code>
+          <code class="ruby">		before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="44">
+          <span class="hits">2</span>
           
-          <code class="ruby">			@super = FactoryGirl.create(:super_admin)</code>
+          <code class="ruby">			@up_count = UserProfile.all.count</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@super.is_super_admin?.should eq true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">		end</code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should create a UserProfile after creating a user&quot; do </code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
-          <code class="ruby">		it &quot;should return false if the user is not a super_admin&quot; do</code>
+          <code class="ruby">			FactoryGirl.create(:project_manager)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">			@user.is_super_admin?.should eq false</code>
+          <code class="ruby">			UserProfile.all.count.should eq @up_count + 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
@@ -9946,178 +9982,178 @@
           <code class="ruby">		end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">		it &quot;should create a UserProfile with right user_id&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">			user = FactoryGirl.create(:project_manager)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">	describe &quot;#is_admin?&quot; do</code>
+          <code class="ruby">			UserProfile.last.user_id.should eq user.id</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		it &quot;should return true if the user is an admin&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@admin = FactoryGirl.create(:admin)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@admin.is_admin?.should eq true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		it &quot;should return false if the user is not an admin&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@user.is_admin?.should eq false</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;#is_super_admin?&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return true if the user is a super_admin&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@super = FactoryGirl.create(:super_admin)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@super.is_super_admin?.should eq true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return false if the user is not a super_admin&quot; do</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">	describe &quot;#is_pm?&quot; do</code>
+          <code class="ruby">			@user.is_super_admin?.should eq false</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		it &quot;should return true if the user is a project_manager&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@user.is_pm?.should eq true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		it &quot;should return false if the user is not a project manager&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@admin = FactoryGirl.create(:admin)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="68">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			@admin.is_pm?.should eq false</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">	</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">	describe &quot;#is_author?&quot; do</code>
+          <code class="ruby">	describe &quot;#is_admin?&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
-          <code class="ruby">		it &quot;should return true if the user is an author&quot; do</code>
+          <code class="ruby">		it &quot;should return true if the user is an admin&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
-          <code class="ruby">			@author = FactoryGirl.create(:author)</code>
+          <code class="ruby">			@admin = FactoryGirl.create(:admin)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
-          <code class="ruby">			@author.is_author?.should eq true</code>
+          <code class="ruby">			@admin.is_admin?.should eq true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="70">
           
           
           <code class="ruby">		end</code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return false if the user is not an admin&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@user.is_admin?.should eq false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;#is_pm?&quot; do</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
-          <code class="ruby">		it &quot;should return false if the user is not an author&quot; do</code>
+          <code class="ruby">		it &quot;should return true if the user is a project_manager&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">			@user.is_author?.should eq false</code>
+          <code class="ruby">			@user.is_pm?.should eq true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
@@ -10126,13 +10162,97 @@
           <code class="ruby">		end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return false if the user is not a project manager&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@admin = FactoryGirl.create(:admin)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@admin.is_pm?.should eq false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;#is_author?&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return true if the user is an author&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@author = FactoryGirl.create(:author)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@author.is_author?.should eq true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should return false if the user is not an author&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@user.is_author?.should eq false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby">end</code>
@@ -11488,8 +11608,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="152" data-linenumber="8">
-          <span class="hits">152</span>
+        <li class="covered" data-hits="154" data-linenumber="8">
+          <span class="hits">154</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -11548,8 +11668,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="152" data-linenumber="18">
-          <span class="hits">152</span>
+        <li class="covered" data-hits="154" data-linenumber="18">
+          <span class="hits">154</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -11572,8 +11692,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="152" data-linenumber="22">
-          <span class="hits">152</span>
+        <li class="covered" data-hits="154" data-linenumber="22">
+          <span class="hits">154</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>
