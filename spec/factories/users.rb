@@ -5,29 +5,22 @@ FactoryGirl.define do
     last_name   Faker::Name.last_name
     password    'password'
     password_confirmation { |u| u.password }
-    association :profile, factory: :user_profile
+    sequence(:publisher_id) {|n| n }
 
     factory :super_admin do
-      email       Faker::Internet.email
       role "super_admin"
     end
 
     factory :project_manager do
-      email       Faker::Internet.email
-      role "project_manager"
-      sequence(:publisher_id) {|n| n }
+      role        "project_manager"
     end
 
     factory :admin do
-      email       Faker::Internet.email
-      role "admin"
-      sequence(:publisher_id) {|n| n }
+      role        "admin"
     end
 
     factory :author do
-      email       Faker::Internet.email
-      role "author"
-      sequence(:publisher_id) {|n| n }
+      role      "author"
     end
   end
 end

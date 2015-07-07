@@ -32,7 +32,6 @@ describe "User sign in" do
 	    fill_in "Email",                 :with => pm.email
 	    fill_in "Password",              :with => pm.password
 	    click_button "Log in"
-	    save_and_open_page
 	    page.should have_css('#pm-dash')
 		end
 		it "should send authors to the author dashboard" do
