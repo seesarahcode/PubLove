@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	# roles: super_admin, admin, project_manager, author
+  after_create :create_profile
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -24,6 +25,9 @@ class User < ActiveRecord::Base
 
   def is_author?
   	self.role == "author" ? true : false
+  end
+
+  def create_profile
   end
 
 end

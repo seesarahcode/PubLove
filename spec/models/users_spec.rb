@@ -39,6 +39,15 @@ describe User do
 		end
 	end
 
+	describe "#create_profile" do
+		it "should create a UserProfile after creating a user" do 
+
+		end
+		it "should create a UserProfile with right user_id" do
+
+		end
+	end
+
 	describe "#is_super_admin?" do
 		it "should return true if the user is a super_admin" do
 			@super = FactoryGirl.create(:super_admin)
