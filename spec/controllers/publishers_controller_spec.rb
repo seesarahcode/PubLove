@@ -17,7 +17,7 @@ describe PublishersController do
       @publishers = Publisher.all
       assigns(:publishers).should eq(@publishers)
     end
-    it "should only be accessible to a superadmin (me)" do 
+    it "should only be accessible to a super_admin" do 
       pending
     end
   end
@@ -29,7 +29,7 @@ describe PublishersController do
     it "should respond with success" do
       expect(response.status).to eq 200
     end
-    it "should assing a new publisher object" do
+    it "should assign a new publisher object" do
       assigns(:publisher).should be_a_new(Publisher)
     end
     it "should render the :new template" do

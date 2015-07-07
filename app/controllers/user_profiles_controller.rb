@@ -1,5 +1,5 @@
 class UserProfilesController < ApplicationController
-  before_action :set_user_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_profile, only: [:show, :edit, :update]
 
   respond_to :html
 
@@ -12,28 +12,16 @@ class UserProfilesController < ApplicationController
     respond_with(@user_profile)
   end
 
-  def new
-    @user_profile = UserProfile.new
-    respond_with(@user_profile)
-  end
-
   def edit
   end
 
-  def create
-    @user_profile = UserProfile.new(user_profile_params)
-    @user_profile.save
-    respond_with(@user_profile)
-  end
-
   def update
-    @user_profile.update(user_profile_params)
-    respond_with(@user_profile)
-  end
-
-  def destroy
-    @user_profile.destroy
-    respond_with(@user_profile)
+    if @user_profile.update(user_profile_params)
+      respond_to do |format|
+        format.html { redirect_to @user_profile, notice: 'Your profile was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user_profile }
+      end
+    end
   end
 
   private
