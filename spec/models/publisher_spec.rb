@@ -2,10 +2,12 @@ require 'spec_helper'
 
 describe Publisher do
 	before do
-		@publisher = FactoryGirl.create(:publisher)
+    @admin = FactoryGirl.create(:admin)
+		@publisher = FactoryGirl.create(:publisher, admin_id: @admin.id)
 	end
   describe "responses" do
   	subject { @publisher }
+    it { should respond_to(:admin_id) }
 		it { should respond_to(:name) }
 		it { should respond_to(:street) }
 		it { should respond_to(:city) }
@@ -16,6 +18,10 @@ describe Publisher do
   end
 
   describe "validations" do
+    it "should not be valid without an admin" do
+      @publisher.admin_id = nil
+      @publisher.should_not be_valid
+    end
   	it "should not be valid without a name" do
   		@publisher.name = ""
   		@publisher.should_not be_valid
@@ -40,5 +46,15 @@ describe Publisher do
   		@publisher.phone = ""
   		@publisher.should_not be_valid
   	end
+  end
+
+  describe "associations" do
+    context "to an admin" do
+      it "should have an admin with its publisher id" do
+        admin = User.find(@publisher.admin_id)
+        admin.should be_a_kind_of(User)
+        admin.publisher_id.should eq @publisher.id
+      end
+    end
   end
 end
