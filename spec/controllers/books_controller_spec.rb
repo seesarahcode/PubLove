@@ -3,7 +3,8 @@ require 'spec_helper'
 describe BooksController do 
   
   before(:each) do
-    @pub = FactoryGirl.create(:publisher)
+    @admin = FactoryGirl.create(:admin)
+    @pub = FactoryGirl.create(:publisher, admin_id: @admin.id)
     sign_in(FactoryGirl.create(:project_manager, :publisher_id => @pub.id))
     @book = FactoryGirl.create(:book, :publisher_id => @pub.id)
     5.times { FactoryGirl.create(:book, :publisher_id => @pub.id) }
@@ -79,7 +80,7 @@ describe BooksController do
 
     describe "GET /show" do 
       before :each do
-        @book = FactoryGirl.create(:book)
+        @book = FactoryGirl.create(:book, publisher_id: @pub.id)
         get :show, id: @book.id
       end
       it "should respond with success" do

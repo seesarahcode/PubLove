@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Book do 
 
 	before do 
-		@pub = FactoryGirl.create(:publisher)
+		@pub = FactoryGirl.create(:publisher, admin_id: FactoryGirl.create(:admin).id)
 		@book = FactoryGirl.create(:book, :publisher_id => @pub.id)
 	end
 

@@ -4,6 +4,5 @@ FactoryGirl.define do
     sequence(:isbn) { |n| "#{rand(10 ** 13)}"}
     sequence(:sku) { |n| rand(10 ** 5) }
     pub_year 2015
-    publisher
   end
 end

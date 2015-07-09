@@ -3,7 +3,8 @@ require 'spec_helper'
 describe PublishersController do
 
   before :each do 
-    @publisher = FactoryGirl.create(:publisher)
+    @admin = FactoryGirl.create(:admin)
+    @publisher = FactoryGirl.create(:publisher, admin_id: @admin.id)
   end
 
   describe "GET index" do
@@ -41,9 +42,10 @@ describe PublishersController do
     context "with valid parameters" do
       before :each do
         @pub_count = Publisher.all.count
+        @admin = FactoryGirl.create(:admin)
         post :create, publisher: { name: "Lil Book Co", street: "123 Read St", 
           city: "Boston", state: "MA", zip: 38930, phone: "290-555-2984", 
-          website: "www.lilbook.co" }
+          website: "www.lilbook.co", admin_id: @admin.reload.id }
       end
       it "should respond with success" do
         expect(response.status).to eq 302

@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ApplicationHelper do 
 
 	before do
-		@pub = FactoryGirl.create(:publisher)
+		@pub = FactoryGirl.create(:publisher, admin_id: FactoryGirl.create(:admin).id)
 		@user = FactoryGirl.create(:project_manager, :publisher_id => @pub.id)
 		sign_in(@user)
 	end
