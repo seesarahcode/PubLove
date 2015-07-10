@@ -16,11 +16,6 @@ FactoryGirl.define do
 
     factory :admin do
       role      "admin"
-      trait :with_publisher do
-        after :create do |admin|
-          create_list :publisher, 1, :admin_id => admin.reload.id
-        end
-      end
     end
 
     factory :author do

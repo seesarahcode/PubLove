@@ -23,64 +23,6 @@ describe PublishersController do
     end
   end
 
-  describe "GET new" do
-    before :each do
-      get :new
-    end
-    it "should respond with success" do
-      expect(response.status).to eq 200
-    end
-    it "should assign a new publisher object" do
-      assigns(:publisher).should be_a_new(Publisher)
-    end
-    it "should render the :new template" do
-      expect(response).to render_template(:new)
-    end
-  end
-
-  describe "POST /create" do
-    context "with valid parameters" do
-      before :each do
-        @pub_count = Publisher.all.count
-        @admin = FactoryGirl.create(:admin)
-        post :create, publisher: { name: "Lil Book Co", street: "123 Read St", 
-          city: "Boston", state: "MA", zip: 38930, phone: "290-555-2984", 
-          website: "www.lilbook.co", admin_id: @admin.reload.id }
-      end
-      it "should respond with success" do
-        expect(response.status).to eq 302
-      end
-      it "should create a new publisher object" do
-        Publisher.all.count.should eq (@pub_count + 1)
-      end
-      it "should redirect to the new publisher page" do
-        response.should redirect_to(Publisher.last)
-      end
-      it "should show a flash message" do
-        expect(flash[:notice]).to match(/^Publisher was successfully created./)
-      end
-    end
-    context "with invalid parameters" do
-      before :each do
-        @pub_count = Publisher.all.count
-        post :create, publisher: { name: "", street: "", city: "Seattle",
-          state: "WA", zip: 85920, phone: "", website: "" }
-      end
-      it "should respond with an error" do
-        expect(response.status).to eq 422
-      end
-      it "should show an error flash message" do
-        expect(flash[:notice]).to match(/^Publisher could not be created./)
-      end
-      it "should not create a new publisher" do
-        Publisher.all.count.should eq @pub_count
-      end
-      it "should render the new page again" do
-        response.should render_template(:new)
-      end
-    end
-  end
-
   describe "GET show" do
     before :each do
       get :show, id: @publisher.id
@@ -110,7 +52,7 @@ describe PublishersController do
     end
     context "with invalid parameters" do
       before :each do
-        put :update, id: @publisher.id, publisher: { name: "" }
+        put :update, id: @publisher.id, publisher: { admin_id: nil }
       end
       it "should respond with an error" do
         expect(response.status).to eq 422

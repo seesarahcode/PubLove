@@ -12,27 +12,7 @@ class PublishersController < ApplicationController
     respond_with(@publisher)
   end
 
-  def new
-    @publisher = Publisher.new
-    respond_with(@publisher)
-  end
-
   def edit
-  end
-
-  def create
-    @publisher = Publisher.new(publisher_params)
-    if @publisher.save
-      respond_to do |format|
-        format.html do
-          flash[:notice] = "Publisher was successfully created."
-          redirect_to @publisher
-        end
-      end
-    else
-      flash[:notice] = "Publisher could not be created."
-      render :new, status: :unprocessable_entity 
-    end
   end
 
   def update
@@ -63,6 +43,6 @@ class PublishersController < ApplicationController
     end
 
     def publisher_params
-      params.require(:publisher).permit(:name, :street, :state, :city, :zip, :phone, :website)
+      params.require(:publisher).permit(:name, :street, :state, :city, :zip, :phone, :website, :admin_id)
     end
 end
