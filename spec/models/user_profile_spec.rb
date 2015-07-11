@@ -14,7 +14,7 @@ describe UserProfile do
 		it { should respond_to(:bio) }
 		it { should respond_to(:favorite_books) }
 		it { should respond_to(:phone) }
-		# it { should respond_to(:birthday) }
+		it { should respond_to(:birthday) }
   end
   describe "validations" do
   	it "should not be valid without a user" do

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-09T22:59:25-05:00">2015-07-09T22:59:25-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-10T22:05:42-05:00">2015-07-10T22:05:42-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>50</b> files in total.
-    <b>757</b> relevant lines. 
-    <span class="green"><b>757</b> lines covered</span> and
+    <b>758</b> relevant lines. 
+    <span class="green"><b>758</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -437,7 +437,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>20.3</td>
+        <td>20.4</td>
       </tr>
       
       <tr>
@@ -474,10 +474,10 @@
         <td class="strong"><a href="#96e09babd6f5f8328445787fde66d96d353bd219" class="src_link" title="spec/models/user_profile_spec.rb">spec/models/user_profile_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>36</td>
-        <td>25</td>
-        <td>25</td>
+        <td>26</td>
+        <td>26</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -537,7 +537,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>49.3</td>
+        <td>49.7</td>
       </tr>
       
       <tr>
@@ -2692,8 +2692,8 @@
           <code class="ruby">  def create_profile</code>
         </li>
       
-        <li class="covered" data-hits="156" data-linenumber="33">
-          <span class="hits">156</span>
+        <li class="covered" data-hits="157" data-linenumber="33">
+          <span class="hits">157</span>
           
           <code class="ruby">    self.publisher_id.present? ? UserProfile.create(user_id: self.id, publisher_id: self.publisher_id) : UserProfile.create(user_id: self.id)</code>
         </li>
@@ -2716,8 +2716,8 @@
           <code class="ruby">  def create_publisher_for_admin</code>
         </li>
       
-        <li class="covered" data-hits="156" data-linenumber="37">
-          <span class="hits">156</span>
+        <li class="covered" data-hits="157" data-linenumber="37">
+          <span class="hits">157</span>
           
           <code class="ruby">    if role == &quot;admin&quot; &amp;&amp; publisher_id.blank?</code>
         </li>
@@ -8176,8 +8176,8 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="135" data-linenumber="3">
-          <span class="hits">135</span>
+        <li class="covered" data-hits="136" data-linenumber="3">
+          <span class="hits">136</span>
           
           <code class="ruby">    sequence(:email) { |n| &quot;bookmaker#{n}@lilpub.com&quot; }</code>
         </li>
@@ -8200,8 +8200,8 @@
           <code class="ruby">    password    &#39;password&#39;</code>
         </li>
       
-        <li class="covered" data-hits="156" data-linenumber="7">
-          <span class="hits">156</span>
+        <li class="covered" data-hits="157" data-linenumber="7">
+          <span class="hits">157</span>
           
           <code class="ruby">    password_confirmation { |u| u.password }</code>
         </li>
@@ -9151,8 +9151,8 @@
     <h3>spec/models/user_profile_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>26</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -9184,14 +9184,14 @@
           <code class="ruby">  before do </code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="5">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="5">
+          <span class="hits">11</span>
           
           <code class="ruby">  	@user = FactoryGirl.create(:project_manager)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="6">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="6">
+          <span class="hits">11</span>
           
           <code class="ruby">  	@user_profile = FactoryGirl.create(:user_profile, user_id: @user.id)</code>
         </li>
@@ -9208,8 +9208,8 @@
           <code class="ruby">  describe &quot;responses&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="9">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="9">
+          <span class="hits">9</span>
           
           <code class="ruby">  	subject { @user_profile }</code>
         </li>
@@ -9256,10 +9256,10 @@
           <code class="ruby">		it { should respond_to(:phone) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">		# it { should respond_to(:birthday) }</code>
+          <code class="ruby">		it { should respond_to(:birthday) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -11314,8 +11314,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="146" data-linenumber="8">
-          <span class="hits">146</span>
+        <li class="covered" data-hits="147" data-linenumber="8">
+          <span class="hits">147</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -11374,8 +11374,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="146" data-linenumber="18">
-          <span class="hits">146</span>
+        <li class="covered" data-hits="147" data-linenumber="18">
+          <span class="hits">147</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -11398,8 +11398,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="146" data-linenumber="22">
-          <span class="hits">146</span>
+        <li class="covered" data-hits="147" data-linenumber="22">
+          <span class="hits">147</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>
