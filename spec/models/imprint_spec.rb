@@ -9,6 +9,7 @@ describe Imprint do
   	subject { @imprint }
   	it { should respond_to(:name) }
   	it { should respond_to(:publisher_id) }
+    it { should be_valid }
   end
   describe "validations" do
   	it "should not be valid without a publisher id" do
