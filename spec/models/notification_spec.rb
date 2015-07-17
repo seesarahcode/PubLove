@@ -13,6 +13,13 @@ describe Notification do
     it { should be_valid }
   end
   describe "validations" do
-  
+    it "should not be valid without a message" do
+      @notification.message = ""
+      @notification.should_not be_valid
+    end
+    it "should not be valid without a type" do
+      @notification.type = ""
+      @notification.should_not be_valid
+    end
   end
 end
