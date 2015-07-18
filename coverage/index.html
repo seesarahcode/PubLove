@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-16T19:58:33-05:00">2015-07-16T19:58:33-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-17T21:48:20-05:00">2015-07-17T21:48:20-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.04
+         4.09
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>56</b> files in total.
-    <b>803</b> relevant lines. 
-    <span class="green"><b>803</b> lines covered</span> and
+    <b>59</b> files in total.
+    <b>829</b> relevant lines. 
+    <span class="green"><b>829</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -173,7 +173,17 @@
       <tr>
         <td class="strong"><a href="#dcfc065213838e00364f235145c8bb12e6e82c5e" class="src_link" title="app/models/book.rb">app/models/book.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#a90c071550f690ac776db56d7852d98be86199d6" class="src_link" title="app/models/book_team.rb">app/models/book_team.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
         <td>3</td>
         <td>3</td>
         <td>0</td>
@@ -217,7 +227,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>28.0</td>
+        <td>30.0</td>
       </tr>
       
       <tr>
@@ -421,13 +431,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#a9ae157c396e70bf04dd05cb60e0839cc08e88af" class="src_link" title="spec/factories/book_teams.rb">spec/factories/book_teams.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#68215cecc3e9e933a705e5dab85223a7c06de619" class="src_link" title="spec/factories/books.rb">spec/factories/books.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>8</td>
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>53.3</td>
+        <td>55.3</td>
       </tr>
       
       <tr>
@@ -477,7 +497,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>20.9</td>
+        <td>22.5</td>
       </tr>
       
       <tr>
@@ -488,6 +508,16 @@
         <td>11</td>
         <td>0</td>
         <td>1.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#809211c646a123931f177d3a835834b0a1572d44" class="src_link" title="spec/models/book_team_spec.rb">spec/models/book_team_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>28</td>
+        <td>19</td>
+        <td>19</td>
+        <td>0</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -597,7 +627,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>53.3</td>
+        <td>55.3</td>
       </tr>
       
       <tr>
@@ -2419,8 +2449,8 @@
     <h3>app/models/book.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2446,25 +2476,79 @@
           <code class="ruby">	belongs_to :publisher</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	has_many :team_members, class_name: &quot;BookTeam&quot;, foreign_key: &quot;book_id&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">	validates :title, :pub_year, :publisher_id, presence: true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="a90c071550f690ac776db56d7852d98be86199d6">
+  <div class="header">
+    <h3>app/models/book_team.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class BookTeam &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	belongs_to :book</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	validates :book_id, :user_id, 	presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -2848,8 +2932,8 @@
           <code class="ruby">  def create_profile</code>
         </li>
       
-        <li class="covered" data-hits="161" data-linenumber="33">
-          <span class="hits">161</span>
+        <li class="covered" data-hits="173" data-linenumber="33">
+          <span class="hits">173</span>
           
           <code class="ruby">    self.publisher_id.present? ? UserProfile.create(user_id: self.id, publisher_id: self.publisher_id) : UserProfile.create(user_id: self.id)</code>
         </li>
@@ -2872,26 +2956,26 @@
           <code class="ruby">  def create_publisher_for_admin</code>
         </li>
       
-        <li class="covered" data-hits="161" data-linenumber="37">
-          <span class="hits">161</span>
+        <li class="covered" data-hits="173" data-linenumber="37">
+          <span class="hits">173</span>
           
           <code class="ruby">    if role == &quot;admin&quot; &amp;&amp; publisher_id.blank?</code>
         </li>
       
-        <li class="covered" data-hits="82" data-linenumber="38">
-          <span class="hits">82</span>
+        <li class="covered" data-hits="88" data-linenumber="38">
+          <span class="hits">88</span>
           
           <code class="ruby">      pub = Publisher.create(admin_id: self.id)</code>
         </li>
       
-        <li class="covered" data-hits="82" data-linenumber="39">
-          <span class="hits">82</span>
+        <li class="covered" data-hits="88" data-linenumber="39">
+          <span class="hits">88</span>
           
           <code class="ruby">      self.publisher_id = pub.id</code>
         </li>
       
-        <li class="covered" data-hits="82" data-linenumber="40">
-          <span class="hits">82</span>
+        <li class="covered" data-hits="88" data-linenumber="40">
+          <span class="hits">88</span>
           
           <code class="ruby">      self.save</code>
         </li>
@@ -8072,6 +8156,54 @@
   </pre>
 </div>
       
+        <div class="source_table" id="a9ae157c396e70bf04dd05cb60e0839cc08e88af">
+  <div class="header">
+    <h3>spec/factories/book_teams.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryGirl.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :book_team do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    team_role &quot;Cover artist&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="68215cecc3e9e933a705e5dab85223a7c06de619">
   <div class="header">
     <h3>spec/factories/books.rb</h3>
@@ -8104,14 +8236,14 @@
           <code class="ruby">    title &quot;Harry Potter and Goblet of Awesome&quot;</code>
         </li>
       
-        <li class="covered" data-hits="158" data-linenumber="4">
-          <span class="hits">158</span>
+        <li class="covered" data-hits="164" data-linenumber="4">
+          <span class="hits">164</span>
           
           <code class="ruby">    sequence(:isbn) { |n| &quot;#{rand(10 ** 13)}&quot;}</code>
         </li>
       
-        <li class="covered" data-hits="158" data-linenumber="5">
-          <span class="hits">158</span>
+        <li class="covered" data-hits="164" data-linenumber="5">
+          <span class="hits">164</span>
           
           <code class="ruby">    sequence(:sku) { |n| rand(10 ** 5) }</code>
         </li>
@@ -8434,8 +8566,8 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="140" data-linenumber="3">
-          <span class="hits">140</span>
+        <li class="covered" data-hits="152" data-linenumber="3">
+          <span class="hits">152</span>
           
           <code class="ruby">    sequence(:email) { |n| &quot;bookmaker#{n}@lilpub.com&quot; }</code>
         </li>
@@ -8458,8 +8590,8 @@
           <code class="ruby">    password    &#39;password&#39;</code>
         </li>
       
-        <li class="covered" data-hits="161" data-linenumber="7">
-          <span class="hits">161</span>
+        <li class="covered" data-hits="173" data-linenumber="7">
+          <span class="hits">173</span>
           
           <code class="ruby">    password_confirmation { |u| u.password }</code>
         </li>
@@ -8723,6 +8855,192 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="809211c646a123931f177d3a835834b0a1572d44">
+  <div class="header">
+    <h3>spec/models/book_team_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe BookTeam do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before do </code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="5">
+          <span class="hits">6</span>
+          
+          <code class="ruby">  	@pub = FactoryGirl.create(:publisher, admin_id: FactoryGirl.create(:admin).id)</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
+          
+          <code class="ruby">		@book = FactoryGirl.create(:book, :publisher_id =&gt; @pub.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
+          
+          <code class="ruby">		@book_team = FactoryGirl.create(:book_team, :book_id =&gt; @book.id, :user_id =&gt; FactoryGirl.create(:project_manager).id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;responses&quot; do </code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="11">
+          <span class="hits">5</span>
+          
+          <code class="ruby">		subject { @book_team }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it { should respond_to(:book_id) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it { should respond_to(:user_id) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		it { should respond_to(:team_role) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">	  it { should be_valid }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	describe &quot;validations&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should not be valid without a book id&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@book_team.book_id = &quot;&quot; </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@book_team.should_not be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should not be valid without a user id&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@book_team.user_id = &quot;&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			@book_team.should_not be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
@@ -11878,8 +12196,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="158" data-linenumber="8">
-          <span class="hits">158</span>
+        <li class="covered" data-hits="164" data-linenumber="8">
+          <span class="hits">164</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -11938,8 +12256,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="158" data-linenumber="18">
-          <span class="hits">158</span>
+        <li class="covered" data-hits="164" data-linenumber="18">
+          <span class="hits">164</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -11962,8 +12280,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="158" data-linenumber="22">
-          <span class="hits">158</span>
+        <li class="covered" data-hits="164" data-linenumber="22">
+          <span class="hits">164</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>
