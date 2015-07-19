@@ -55,5 +55,10 @@ describe Publisher do
         admin.publisher_id.should eq @publisher.id
       end
     end
+    context "to employees" do
+      it "should find employees with its publisher id" do
+        @publisher.employees.last.should eq @admin
+      end
+    end
   end
 end
