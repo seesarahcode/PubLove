@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
+  has_one :publisher
 
   validates :role, presence: true
 
@@ -34,11 +35,10 @@ class User < ActiveRecord::Base
   end
 
   def create_publisher_for_admin
-    if role == "admin" && publisher_id.blank?
+    if role == "admin" && self.publisher_id.blank?
       pub = Publisher.create(admin_id: self.id)
       self.publisher_id = pub.id
       self.save
     end
   end
-
 end
