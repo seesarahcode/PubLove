@@ -6,10 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin1 = User.create(email: "msbooksly@gmail.com",
+admin1 = User.new(email: "msbooksly@gmail.com",
     password: "password", password_confirmation: "password",
     role: "admin")
-admin1.publisher.update_attributes(name: "Booksly & Wordwood",
+admin1.save
+pub1 = Publisher.find(admin1.reload.publisher_id)
+pub1.update_attributes(name: "Booksly & Wordwood",
     street: "888 Globe Stage Place",
     state: "Washington",
     city: "Seattle",
@@ -18,10 +20,12 @@ admin1.publisher.update_attributes(name: "Booksly & Wordwood",
     website: "www.bookslyandwordwood.com")
 
 
-admin2 = User.create(email: "lil_book_ceo@gmail.com",
+admin2 = User.new(email: "lil_book_ceo@gmail.com",
     password: "password", password_confirmation: "password",
     role: "admin")
-admin2.publisher.update_attributes(name: "Lil Book Co.",
+admin2.save
+pub2 = Publisher.find(admin2.publisher_id)
+pub2.update_attributes(name: "Lil Book Co.",
     street: "2138 Kerning Dr",
     state: "Georgia",
     city: "Atlanta",
@@ -29,10 +33,12 @@ admin2.publisher.update_attributes(name: "Lil Book Co.",
     phone: "800-555-2093",
     website: "www.lilbookco.com")
 
-admin3 = User.create(email: "smutinc@gmail.com",
+admin3 = User.new(email: "smutinc@gmail.com",
     password: "password", password_confirmation: "password",
     role: "admin")
-admin3.publisher.update_attributes(name: "Smut Inc.",
+admin3.save
+pub3 = Publisher.find(admin3.publisher_id)
+pub3.update_attributes(name: "Smut Inc.",
     street: "1930 Page Ave",
     state: "New York",
     city: "Yonkers",
