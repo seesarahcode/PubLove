@@ -12,10 +12,17 @@ class User < ActiveRecord::Base
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
   has_one :publisher
 
+  #has_and_belongs_to_many :books
+
   validates :role, presence: true
+ # validates :publisher_id, presence: true, :if => :not_super?
 
   def is_super_admin?
   	self.role == "super_admin" ? true : false
+  end
+
+  def not_super?
+    self.role == "super_admin" ? false : true
   end
 
   def is_admin?

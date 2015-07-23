@@ -1,11 +1,13 @@
 require 'spec_helper'
 
 describe User do
-	before do 
+	before do
+		admin = FactoryGirl.create(:admin) 
 		@user = FactoryGirl.create(:project_manager, 
 			:email => "editor@lilpublisher.com", 
 			:password => "password", 
-			:role => "project_manager")
+			:role => "project_manager", 
+			:publisher_id => admin.publisher_id)
 	end
 
 	describe "responses" do
@@ -60,6 +62,16 @@ describe User do
 		end
 		it "should return false if the user is not a super_admin" do
 			@user.is_super_admin?.should eq false
+		end
+	end
+
+	describe "#not_super?" do
+		it "should return false if the user is a super_admin" do
+			@super = FactoryGirl.create(:super_admin)
+			@super.not_super?.should eq false
+		end
+		it "should return true if the user is a pm or whatever" do
+			@user.not_super?.should eq true
 		end
 	end
 
