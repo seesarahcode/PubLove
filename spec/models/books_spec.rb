@@ -14,6 +14,7 @@ describe Book do
 		it { should respond_to(:sku) }
 		it { should respond_to(:pub_year) }
 		it { should respond_to(:publisher) }
+		it { should respond_to(:authors) }
 	  it { should be_valid }
 	end
 
@@ -40,6 +41,22 @@ describe Book do
 			it "should be included in the results for publisher.books" do
 				@pub.books.should_not be_nil
 				@pub.books.first.id.should eq @book.id
+			end
+		end
+		context "to authors" do
+			before :each do 
+				author = FactoryGirl.create(:author)
+				@book_author = FactoryGirl.create(:book_author, author_id: author.id, book_id: @book.id)
+			end
+			
+			it "should return authors" do 
+				coauthor = FactoryGirl.create(:author)
+				author2 = FactoryGirl.create(:book_author, author_id: coauthor.id, book_id: @book.id)
+				@book.authors.should eq [@book_author1, author2]
+			end
+			
+			it "should return Book_Author objects" do
+				@book.authors.should be_a_kind_of(Book_Author)
 			end
 		end
 	end
