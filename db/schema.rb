@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150724024011) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "book_author", force: true do |t|
+  create_table "book_authors", force: true do |t|
     t.integer  "book_id"
     t.integer  "author_id"
     t.datetime "created_at"
