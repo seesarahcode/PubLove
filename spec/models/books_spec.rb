@@ -56,7 +56,7 @@ describe Book do
 			end
 			
 			it "should return Book_Author objects" do
-				@book.authors.should be_a_kind_of(BookAuthor)
+				@book.authors.should be_a_kind_of(Array)
 			end
 		end
 	end
