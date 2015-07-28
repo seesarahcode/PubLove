@@ -6,18 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-admin1 = User.new(email: "msbooksly@gmail.com",
+admin1 = User.create(email: "msbooksly@gmail.com",
     password: "password", password_confirmation: "password",
     role: "admin")
-admin1.save
-pub1 = Publisher.find(admin1.reload.publisher_id)
+puts admin1.id
+puts admin1.publisher_id
+pub1 = Publisher.find_by_id(admin1.publisher_id)
 pub1.update_attributes(name: "Booksly & Wordwood",
     street: "888 Globe Stage Place",
-    state: "Washington",
-    city: "Seattle",
-    zip: 92527,
-    phone: "800-555-4893",
-    website: "www.bookslyandwordwood.com")
+    state: "Washington", city: "Seattle", zip: 92527,
+    phone: "800-555-4893", website: "www.bookslyandwordwood.com")
+pm1 = User.new(email: "writefastedithard@gmail.com", 
+    password: "password", password_confirmation: "password", 
+    role: "project_manager", publisher_id: pub1.id)
+pm1.save
+book1 = Book.new(title: "All the Pretty Pages", 
+    isbn: "978-3-16-148410-0", sku: "80888-1A", 
+    pub_year: 2018, publisher_id: pub1.id)
+book1.save
+author1 = User.new(email: "brilliant_author@gmail.com", 
+    password: "password", password_confirmation: "password", 
+    role: "author")
+author1.save
 
 
 admin2 = User.new(email: "lil_book_ceo@gmail.com",
