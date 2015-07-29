@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
   has_one :publisher
-  has_many :books, through: :book_authors
+  has_many :books
 
   #has_and_belongs_to_many :books
 

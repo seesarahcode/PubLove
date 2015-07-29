@@ -21,7 +21,7 @@ pm1 = User.new(email: "writefastedithard@gmail.com",
     role: "project_manager", publisher_id: pub1.id)
 pm1.save
 book1 = Book.new(title: "All the Pretty Pages", 
-    isbn: "978-3-16-148410-0", sku: "80888-1A", 
+    isbn: "978-3-16-148410-0", sku: "80001-1A", 
     pub_year: 2018, publisher_id: pub1.id)
 book1.save
 author1 = User.new(email: "brilliant_author@gmail.com", 
