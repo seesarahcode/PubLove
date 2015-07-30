@@ -46,17 +46,17 @@ describe Book do
 		context "to authors" do
 			before :each do 
 				author = FactoryGirl.create(:author)
-				@book_author = FactoryGirl.create(:book_author, author_id: author.id, book_id: @book.id)
+				@book_author = FactoryGirl.create(:book_author, user_id: author.id, book_id: @book.id)
 			end
 			
 			it "should return authors" do 
 				coauthor = FactoryGirl.create(:author)
-				author2 = FactoryGirl.create(:book_author, author_id: coauthor.id, book_id: @book.id)
-				@book.authors.include?(@book_author1).should eq true
+				author2 = FactoryGirl.create(:book_author, user_id: coauthor.id, book_id: @book.id)
+				@book.authors.include?(coauthor).should eq true
 			end
 			
 			it "should return Book_Author objects" do
-				@book.authors.should be_a_kind_of(Array)
+				@book.authors[0].should be_a_kind_of(User)
 			end
 		end
 	end

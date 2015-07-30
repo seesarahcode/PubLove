@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-28T22:32:32-05:00">2015-07-28T22:32:32-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-29T23:13:51-05:00">2015-07-29T23:13:51-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -2521,13 +2521,13 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">	has_many :authors, :class_name =&gt; &#39;BookAuthor&#39;, :foreign_key =&gt; &#39;book_id&#39;</code>
+          <code class="ruby">	has_and_belongs_to_many :authors, :class_name =&gt; &#39;User&#39;, :join_table =&gt; &quot;book_authors&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
@@ -2911,7 +2911,7 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :books</code>
+          <code class="ruby">  has_and_belongs_to_many :books, :join_table =&gt; &quot;book_authors&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -9583,7 +9583,7 @@
         <li class="covered" data-hits="2" data-linenumber="49">
           <span class="hits">2</span>
           
-          <code class="ruby">				@book_author = FactoryGirl.create(:book_author, author_id: author.id, book_id: @book.id)</code>
+          <code class="ruby">				@book_author = FactoryGirl.create(:book_author, user_id: author.id, book_id: @book.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
@@ -9613,13 +9613,13 @@
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">				author2 = FactoryGirl.create(:book_author, author_id: coauthor.id, book_id: @book.id)</code>
+          <code class="ruby">				author2 = FactoryGirl.create(:book_author, user_id: coauthor.id, book_id: @book.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">				@book.authors.include?(@book_author1).should eq true</code>
+          <code class="ruby">				@book.authors.include?(coauthor).should eq true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
@@ -9643,7 +9643,7 @@
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">				@book.authors.should be_a_kind_of(Array)</code>
+          <code class="ruby">				@book.authors[0].should be_a_kind_of(User)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
