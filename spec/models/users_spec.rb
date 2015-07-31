@@ -2,12 +2,13 @@ require 'spec_helper'
 
 describe User do
 	before do
-		admin = FactoryGirl.create(:admin) 
+		@admin = FactoryGirl.create(:admin) 
 		@user = FactoryGirl.create(:project_manager, 
 			:email => "editor@lilpublisher.com", 
 			:password => "password", 
 			:role => "project_manager", 
-			:publisher_id => admin.publisher_id)
+			:publisher_id => @admin.publisher_id)
+		@author = FactoryGirl.create(:author, publisher_id: @admin.publisher_id)
 	end
 
 	describe "responses" do
@@ -38,6 +39,27 @@ describe User do
 		it "should not be valid without a role" do
 			@user.role = ""
 			@user.should_not be_valid
+		end
+	end
+
+	describe "associations" do
+		context "with books" do
+			context "and authors" do
+				before do
+					@book = FactoryGirl.create(:book, publisher_id: @admin.publisher_id)
+					@book_author = FactoryGirl.create(:book_author, book_id: @book.id, user_id: @author.id)
+				end
+				it "should return the author's books" do
+					@author.books.include?(@book).should eq true
+				end
+				it "should find a book_author record with the author's id" do
+					ba_record = BookAuthor.where(user_id: @author.id).last
+					ba_record.user_id.should eq @author.id
+					ba_record.book_id.should eq @book.id
+				end
+			end
+			context "and project managers" do
+			end
 		end
 	end
 

@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
   has_one :publisher
-  has_and_belongs_to_many :books, :join_table => "book_authors"
+  has_and_belongs_to_many :books, :join_table => "book_authors", :conditions => { :role => "author" }
 
   #has_and_belongs_to_many :books
 

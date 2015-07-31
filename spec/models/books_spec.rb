@@ -55,7 +55,7 @@ describe Book do
 				@book.authors.include?(coauthor).should eq true
 			end
 			
-			it "should return Book_Author objects" do
+			it "should return User objects" do
 				@book.authors[0].should be_a_kind_of(User)
 			end
 		end
