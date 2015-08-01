@@ -58,7 +58,23 @@ describe User do
 					ba_record.book_id.should eq @book.id
 				end
 			end
+		end
+		context "with projects" do
 			context "and project managers" do
+				before do
+					@book = FactoryGirl.create(:book, publisher_id: @admin.publisher_id)
+					@pm = FactoryGirl.create(:project_manager, publisher_id: @admin.publisher_id)
+					@book_team = FactoryGirl.create(:book_team, book_id: @book.id,
+						user_id: @pm.id, team_role: "Project Manager")
+				end
+				it "should return the pm's book projects" do
+					@pm.projects.include?(@book).should eq true
+				end
+				it "should find a book_team record with the pm's id" do
+					bt_record = BookTeam.where(user_id: @pm.id).last
+					bt_record.user_id.should eq @pm.id
+					bt_record.book_id.should eq @book.id
+				end
 			end
 		end
 	end
