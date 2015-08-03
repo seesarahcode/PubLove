@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
+  has_one :preferences, class_name: "Preference", foreign_key: "user_id"
   has_one :publisher
   has_and_belongs_to_many :books, :join_table => "book_authors", :conditions => { :role => "author" }
   has_and_belongs_to_many :projects, class_name: "Book", :join_table => "book_teams", :conditions => { :role => "project_manager" || "admin"}
