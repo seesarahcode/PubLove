@@ -1638,11 +1638,24 @@
         null,
         1,
         1,
+        null,
+        1,
         1,
         1,
         null,
         1,
         null,
+        null
+      ],
+      "/Users/sarah/Bibliateq/spec/models/team_role_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/sarah/Bibliateq/app/models/team_role.rb": [
+        1,
         null
       ],
       "/Users/sarah/Bibliateq/spec/models/user_profile_spec.rb": [
@@ -2076,6 +2089,6 @@
         null
       ]
     },
-    "timestamp": 1438568350
+    "timestamp": 1438657291
   }
 }
