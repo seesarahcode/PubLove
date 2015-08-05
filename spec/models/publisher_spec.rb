@@ -60,5 +60,11 @@ describe Publisher do
         @publisher.employees.last.should eq @admin
       end
     end
+    context "to team roles" do
+      it "should" do
+        team_role = FactoryGirl.create(:team_role, publisher_id: @publisher.id)
+        @publisher.team_roles.last.should eq team_role
+      end
+    end
   end
 end
