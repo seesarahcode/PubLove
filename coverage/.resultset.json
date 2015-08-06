@@ -595,6 +595,30 @@
         null,
         null
       ],
+      "/Users/sarah/Bibliateq/spec/factories/events.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/sarah/Bibliateq/spec/factories/imprints.rb": [
         1,
         1,
@@ -688,7 +712,7 @@
         null,
         null,
         1,
-        189,
+        195,
         null,
         null,
         null,
@@ -698,11 +722,11 @@
         null,
         null,
         1,
-        189,
+        195,
         null,
         null,
         1,
-        189,
+        195,
         null,
         null,
         null
@@ -1473,6 +1497,32 @@
         null,
         null
       ],
+      "/Users/sarah/Bibliateq/spec/models/event_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        6,
+        null,
+        null,
+        1,
+        7,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/sarah/Bibliateq/app/models/event.rb": [
+        1,
+        null
+      ],
       "/Users/sarah/Bibliateq/spec/models/imprint_spec.rb": [
         1,
         null,
@@ -2125,6 +2175,6 @@
         null
       ]
     },
-    "timestamp": 1438747153
+    "timestamp": 1438830974
   }
 }
