@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Event do
-  before do 
+  before :each do 
 		@event = FactoryGirl.create(:event)
 	end
 
@@ -16,5 +16,21 @@ describe Event do
 	end
 
 	describe "validations" do
+		it "should require an event type" do
+			@event.event_type = ""
+			@event.should_not be_valid
+		end
+		it "should require a date" do
+			@event.date = ""
+			@event.should_not be_valid
+		end
+		it "should require a time" do
+			@event.time = ""
+			@event.should_not be_valid
+		end
+		it "should require a title" do
+			@event.title = ""
+			@event.should_not be_valid
+		end
 	end
 end

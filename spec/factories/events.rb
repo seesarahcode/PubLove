@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :event do
-  	event_type 			"meeting"
+  	event_type 			"phone_call"
     date						Date.today
     time						Time.now
     title						"Phone call with Jo"

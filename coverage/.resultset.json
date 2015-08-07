@@ -712,7 +712,7 @@
         null,
         null,
         1,
-        195,
+        199,
         null,
         null,
         null,
@@ -722,11 +722,11 @@
         null,
         null,
         1,
-        195,
+        199,
         null,
         null,
         1,
-        195,
+        199,
         null,
         null,
         null
@@ -1502,7 +1502,7 @@
         null,
         1,
         1,
-        6,
+        10,
         null,
         null,
         1,
@@ -1516,10 +1516,27 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
       "/Users/sarah/Bibliateq/app/models/event.rb": [
+        1,
         1,
         null
       ],
@@ -2175,6 +2192,6 @@
         null
       ]
     },
-    "timestamp": 1438830974
+    "timestamp": 1438916034
   }
 }
