@@ -33,4 +33,21 @@ describe Event do
 			@event.should_not be_valid
 		end
 	end
+
+	describe "associations" do
+		context "with attendees" do
+			before do
+				@user = FactoryGirl.create(:project_manager)
+				@event_attendee = FactoryGirl.create(:event_attendee, user_id: @user.id, event_id: @event.id)
+			end
+			it "should return the event's attendees" do
+				@event.attendees.include?(@user).should eq true
+			end
+			it "should find an event_attendee record with the user's id" do
+				e_a = EventAttendee.where(event_id: @event.id).last
+				e_a.user_id.should eq @user.id
+				e_a.event_id.should eq @event.id
+			end
+		end
+	end
 end

@@ -77,6 +77,20 @@ describe User do
 				end
 			end
 		end
+		context "with events" do
+			before do
+				@event = FactoryGirl.create(:event)
+				@event_attendee = FactoryGirl.create(:event_attendee, user_id: @user.id, event_id: @event.id)
+			end
+			it "should return the user's events" do
+				@user.events.include?(@event).should eq true
+			end
+			it "should find an event_attendee record with the user's id" do
+				e_a = EventAttendee.where(user_id: @user.id).last
+				e_a.user_id.should eq @user.id
+				e_a.event_id.should eq @event.id
+			end
+		end
 	end
 
 	describe "#create_profile" do
