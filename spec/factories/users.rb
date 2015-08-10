@@ -22,6 +22,10 @@ FactoryGirl.define do
       role      "author"
     end
 
+    factory :team_member do
+      role      "team_member"
+    end
+
     
   end
 end

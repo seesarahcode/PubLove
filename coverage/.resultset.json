@@ -536,14 +536,14 @@
         null,
         null,
         1,
-        274,
+        292,
         null,
         null,
         1,
-        274,
-        135,
-        135,
-        135,
+        292,
+        141,
+        141,
+        141,
         null,
         null,
         null
@@ -663,6 +663,17 @@
         null,
         null
       ],
+      "/Users/sarah/Bibliateq/spec/factories/tasks.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/sarah/Bibliateq/spec/factories/team_roles.rb": [
         1,
         1,
@@ -684,11 +695,15 @@
       "/Users/sarah/Bibliateq/spec/factories/users.rb": [
         1,
         1,
-        245,
+        257,
         1,
         1,
         1,
-        274,
+        292,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -719,7 +734,7 @@
         null,
         null,
         1,
-        208,
+        214,
         null,
         null,
         null,
@@ -729,11 +744,11 @@
         null,
         null,
         1,
-        208,
+        214,
         null,
         null,
         1,
-        208,
+        214,
         null,
         null,
         null
@@ -1789,6 +1804,43 @@
         null,
         null
       ],
+      "/Users/sarah/Bibliateq/spec/models/task_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        6,
+        6,
+        null,
+        null,
+        null,
+        null,
+        6,
+        6,
+        null,
+        null,
+        1,
+        6,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/sarah/Bibliateq/app/models/task.rb": [
+        1,
+        null
+      ],
       "/Users/sarah/Bibliateq/spec/models/team_role_spec.rb": [
         1,
         null,
@@ -2268,6 +2320,6 @@
         null
       ]
     },
-    "timestamp": 1438991194
+    "timestamp": 1439176272
   }
 }
