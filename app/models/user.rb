@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
   has_one :preferences, class_name: "Preference", foreign_key: "user_id"
   has_one :publisher
+  has_many :tasks, foreign_key: "assigned_to"
   has_and_belongs_to_many :events, :join_table => "event_attendees"
   has_and_belongs_to_many :books, :join_table => "book_authors", :conditions => { :role => "author" }
   has_and_belongs_to_many :projects, class_name: "Book", :join_table => "book_teams", :conditions => { :role => "project_manager" || "admin"}

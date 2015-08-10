@@ -91,6 +91,17 @@ describe User do
 				e_a.event_id.should eq @event.id
 			end
 		end
+		context "with tasks" do
+			before do
+				@book = FactoryGirl.create(:book, publisher_id: @admin.publisher_id)
+				@cover_artist = FactoryGirl.create(:team_member)
+				@task = FactoryGirl.create(:task, book_id: @book.id, assigned_by: @user.id, 
+					assigned_to: @cover_artist.id)
+			end
+			it "should return the user's tasks" do
+				@cover_artist.tasks.include?(@task).should eq true
+			end
+		end
 	end
 
 	describe "#create_profile" do
