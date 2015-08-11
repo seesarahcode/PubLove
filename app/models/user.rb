@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	# roles: super_admin, admin, project_manager, author
+	# roles: super_admin, admin, project_manager, author, team_member
   
   after_create :create_profile
   after_create :create_publisher_for_admin
@@ -12,7 +12,9 @@ class User < ActiveRecord::Base
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
   has_one :preferences, class_name: "Preference", foreign_key: "user_id"
   has_one :publisher
-  has_many :tasks, foreign_key: "assigned_to"
+  has_many :tasks
+  has_many :assigned_tasks, :class_name => 'Task', :foreign_key => 'assigned_to'
+  has_many :owned_tasks, :class_name => 'Task', :foreign_key => 'assigned_by'
   has_and_belongs_to_many :events, :join_table => "event_attendees"
   has_and_belongs_to_many :books, :join_table => "book_authors", :conditions => { :role => "author" }
   has_and_belongs_to_many :projects, class_name: "Book", :join_table => "book_teams", :conditions => { :role => "project_manager" || "admin"}

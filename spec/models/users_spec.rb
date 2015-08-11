@@ -98,8 +98,11 @@ describe User do
 				@task = FactoryGirl.create(:task, book_id: @book.id, assigned_by: @user.id, 
 					assigned_to: @cover_artist.id)
 			end
-			it "should return the user's tasks" do
-				@cover_artist.tasks.include?(@task).should eq true
+			it "should return the assigned user's tasks" do
+				@cover_artist.assigned_tasks.include?(@task).should eq true
+			end
+			it "should return the task owner's tasks" do
+				@user.owned_tasks.include?(@task).should eq true
 			end
 		end
 	end

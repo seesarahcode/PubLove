@@ -1,3 +1,5 @@
 class Task < ActiveRecord::Base
-	validates :book_id, :assigned_by, presence: true
+	belongs_to :user
+
+	validates :book_id, :assigned_to, presence: true
 end

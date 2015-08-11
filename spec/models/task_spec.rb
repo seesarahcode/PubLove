@@ -9,8 +9,9 @@ describe Task do
 			:role => "project_manager", 
 			:publisher_id => @admin.publisher_id)
 		@book = FactoryGirl.create(:book, publisher_id: @admin.publisher_id)
+		@assistant = FactoryGirl.create(:team_member)
 		@task = FactoryGirl.create(:task, book_id: @book.id,
-			assigned_by: @user.id)
+			assigned_by: @user.id, assigned_to: @assistant.id)
 	end
 
 	describe "responses" do
@@ -22,6 +23,7 @@ describe Task do
 		it { should respond_to(:due_time) }
 		it { should respond_to(:book_id) }
 		it { should respond_to(:assigned_by) }
+		it { should respond_to(:assigned_to) }
 	end
 
 	describe "validations" do
@@ -32,8 +34,8 @@ describe Task do
 			@task.book_id = ""
 			@task.should_not be_valid
 		end
-		it "should not be valid without an assigned_by id" do
-			@task.assigned_by = ""
+		it "should not be valid without an assigned_to id" do
+			@task.assigned_to = ""
 			@task.should_not be_valid
 		end
 	end
