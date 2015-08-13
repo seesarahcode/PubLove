@@ -1,3 +1,14 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Nav bar
+
+#navbar {
+	display: flex;
+	display: -webkit-flex;
+	-webkit-justify-content: flex-end;
+  justify-content: flex-end;
+	height: 45px;
+	width: 100%
+}
