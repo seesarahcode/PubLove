@@ -1,0 +1,19 @@
+//@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('/assets/Montserrat-Regular.ttf');
+    src: url('/assets/HDV_Peace.eot?iefix') format('eot'),
+         url('/assets/HDV_Peace.woff') format('woff'),
+         url('/assets/HDV_Peace.ttf') format('truetype'),
+         url('/assets/HDV_Peace.svg#webfont') format('svg');
+}
+
+@font-face {
+	font-family: 'Montserrat Bold';
+	src: url('/assets/Montserrat-Bold.ttf');
+	src: url('/assets/montserrat-regular-webfont.eot') format('eot'),
+				url('/assets/montserrat-regular-webfont.woff') format('woff'),
+				url('/assets/montserrat-regular-webfont.ttf') format('truetype'),
+				url('/assets/montserrat-regular-webfont-svg') format('svg');
+}
