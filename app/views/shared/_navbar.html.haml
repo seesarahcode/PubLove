@@ -1,8 +1,22 @@
-#navbar
-	- if user_signed_in?
-		= link_to "Log Out", destroy_user_session_path, :method => :delete
-	- else	
-		= link_to "Features", "#"
-		= link_to "Pricing", "#"
-		= link_to "Log In", new_user_session_path
-		= link_to "Sign Up", new_user_registration_path, class: "signup-btn-nav"
+- if user_signed_in?
+	= link_to "Log Out", destroy_user_session_path, :method => :delete
+- else	
+	%nav.navbar.navbar-default.navbar-fixed-top.topnav{:role=>"navigation" }
+		%div.container.topnav
+			%div.navbar-header
+				%button.navbar-toggle{:type => "button", :data => { :toggle => "collapse", :target => "#bs-example-navbar-collapse-1" } }
+					%span.sr-only Toggle navigation
+					%span.icon-bar
+					%span.icon-bar
+					%span.icon-bar
+				%a.navbar-brand.topnav{:href=>"#"} PubLove
+			%div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+				%ul.nav.navbar-nav.navbar-right
+					%li
+						= link_to "Features", "#"
+					%li
+						= link_to "Pricing", "#"
+					%li
+						= link_to "Log In", new_user_session_path
+					%li
+						= link_to "Sign Up", new_user_registration_path, class: "signup-btn-nav"

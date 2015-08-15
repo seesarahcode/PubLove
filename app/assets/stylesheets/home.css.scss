@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url();
+@import "themes/default";
 // Nav bar
 
 #navbar {
@@ -16,6 +16,7 @@
 #navbar a {	
 	color: $darkTeal !important;	
 	font-family: 'Montserrat', sans-serif !important;
+	font-size: 1.1em;
 	font-weight: 700;
-	padding: 10px 15px;
+	padding: 11px 15px;
 }
