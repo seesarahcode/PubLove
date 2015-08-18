@@ -1,17 +1,20 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @book.title
-%p
-  %b Isbn:
-  = @book.isbn
-%p
-  %b Sku:
-  = @book.sku
-%p
-  %b Pub year:
-  = @book.pub_year
+#book-show	
+	%table.table.table-striped
+		%tr
+			%td.col-md-4	Book Title
+			%td.col-md-4	Cover image here
+			%td.col-md-4	Release date
+		%tr
+			%td.col-md-4	ISBN
+			%td.col-md-4	Genre
+			%td.col-md-4	Table of contents due
+		%tr
+			%td.col-md-4	Author 1 <br> Author 2
+			%td.col-md-4	Formats: <br> Print <br> Ebook
+			%td.col-md-4	First draft due
+		%tr
+			%td.col-md-4	Language<br>English
+			%td.col-md-4
 
 = link_to 'Edit', edit_book_path(@book)
 \|
