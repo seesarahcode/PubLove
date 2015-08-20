@@ -1,15 +1,16 @@
 #pm-dash
-	.col-md-8
-		.book-list
-			%h3 Projects
-			%table.table
-	.col-md-8
-		.notifications
-			%h3 Notifications
-		#data-viz
-			%p You don't have any projects to track. Why don't you add one?
-		.today
-			%h3 Today
-		.calendar
-			%h3 
-				= Time.now.strftime("%B")
+	.pm-dash-row
+		.col-md-8
+			.book-list
+				%h3 Projects
+				%table.table
+		.col-md-8
+			.notifications
+				%h3 Notifications
+			#data-viz
+				%p You don't have any projects to track. Why don't you add one?
+			.today
+				%h3 Today
+			.calendar
+				%h3 
+					= Time.now.strftime("%B")

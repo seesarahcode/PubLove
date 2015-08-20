@@ -6,6 +6,10 @@
 
 #pm-dash {
 	padding-top: 40px;
+	.pm-dash-row {
+		display: inline-flex;
+		display: -webkit-inline-flex;
+	}
 }
 
 // Admin Dashboard
