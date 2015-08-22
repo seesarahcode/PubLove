@@ -4,6 +4,10 @@
 			.book-list
 				%h3 Projects
 				%table.table
+					- @books.each do 
+						%tr 
+							%td
+								= @book.title
 		.col-md-8
 			.notifications
 				%h3 Notifications
