@@ -1,17 +1,37 @@
 #pm-dash
 	.pm-dash-row
-		.col-md-8
+		.col-md-6
 			.book-list
 				%h3 Projects
-				%table.table
-					- @books.each do 
+				%table.table.table-striped.pm-book-table
+					- @books.each do |book| 
 						%tr 
+						- if book.sku
 							%td
-								= @book.title
-		.col-md-8
+								= book.sku
+							%td
+								= book.title
+							%td
+								= book.pub_year
+							%td
+								= book.authors.join(", ")
+						- else
+							%td
+								= book.title
+							%td
+								= book.pub_year
+							%td
+								= book.authors.join(", ")
+		.col-md-1
+		.col-md-9
 			.notifications
 				%h3 Notifications
+				%ul
+					%li J.K. Rowling has uploaded a draft
+					%li Kate completed the Interior Design task
+					%li Ted McGillicutty's first draft is overdue
 			#data-viz
+				%h3 Season Progress
 				%p You don't have any projects to track. Why don't you add one?
 			.today
 				%h3 Today
