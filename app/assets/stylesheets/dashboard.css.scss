@@ -22,6 +22,22 @@
 	}
 }
 
+.calendar-frame {
+	border: solid 1px black;
+	height:	200px;
+	width: 200px;
+	.day-names {
+		border-bottom: solid 1px gray;
+		display: inline-flex;
+		width: 100%;
+		p {
+			line-height: 1px;
+			text-align: center;
+			width: 14.285%;
+		}
+	}
+}
+
 // Author Dashboard
 
 
