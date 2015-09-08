@@ -36,6 +36,14 @@
 			width: 14.285%;
 		}
 	}
+	.month-days {
+		display: inline-flex;
+		width: 100%;
+		p {
+			text-align: center;
+			padding: 4.95%;
+		}
+	}
 }
 
 // Author Dashboard

@@ -35,6 +35,8 @@
 				%p You don't have any projects to track. Why don't you add one?
 			.today
 				%h3 Today
+				%p 9:30 Phone call with Dave
+				%p 1:00 Meeting with Stella
 			.calendar
 				%h3 
 					= Time.now.strftime("%B")
@@ -47,4 +49,8 @@
 						%p Th
 						%p F
 						%p Sa
+					.month-days
+						- (1..Time.days_in_month(Time.now.strftime("%-m").to_i)).each do |day|
+							%p 
+								= day
 		%br
