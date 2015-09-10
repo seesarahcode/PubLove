@@ -1,24 +1,24 @@
 module DashboardHelper
 
-	def calendar_alignment(month) 
-		first = Date.today.beginning_of_month.wday #returns 1-7 for M-Sun
+	def calendar_alignment 
+		first = Date.today.beginning_of_month.wday
 		case first
 		when 1
-			# add one empty div day
+			content_tag(:p)
 		when 2
-			# add two empty div days
+			content_tag(:p) + content_tag(:p) # refactor multiples for conciseness
 		when 3
-			# add three empty div days
+			content_tag(:p) + content_tag(:p) + content_tag(:p)
 		when 4
-			# add four empty div days
+			content_tag(:p) + content_tag(:p) + content_tag(:p) + content_tag(:p)
 		when 5
-			# add five empty div days
+			content_tag(:p) + content_tag(:p) + content_tag(:p) +
+			content_tag(:p) + content_tag(:p)
 		when 6
-			# add six empty div days
-		when 7
-			# add seven empty div days
+			content_tag(:p) + content_tag(:p) + content_tag(:p) +
+			content_tag(:p) + content_tag(:p) + content_tag(:p)
 		else
-			puts "Uh-oh"
+			puts "Nada"
 		end
 	end
 

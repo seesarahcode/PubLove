@@ -50,6 +50,7 @@
 						%p F
 						%p Sa
 					.month-days
+						= calendar_alignment
 						- (1..Time.days_in_month(Time.now.strftime("%-m").to_i)).each do |day|
 							%p 
 								= day
