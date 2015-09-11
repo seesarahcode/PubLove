@@ -37,11 +37,29 @@
 		}
 	}
 	.month-days {
-		display: inline-flex;
+		line-height: 28px;
 		width: 100%;
-		p {
-			text-align: center;
-			padding: 5.95%;
+		.date {
+			display: inline-flex;
+			padding-left: 8px;
+			text-align: right;
+			width: 24px;
+		}
+		.date:nth-child(7):after {
+			content:"\A"; 
+			white-space:pre;
+		}
+		.date:nth-child(14):after {
+			content:"\A"; 
+			white-space:pre;
+		}
+		.date:nth-child(21):after {
+			content:"\A"; 
+			white-space:pre;
+		}
+		.date:nth-child(28):after {
+			content:"\A"; 
+			white-space:pre;
 		}
 	}
 }
