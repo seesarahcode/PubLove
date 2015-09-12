@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "themes/default";
+
 // Nav bar
 
 
@@ -162,4 +163,13 @@ footer {
 
 p.copyright {
   margin: 15px 0 0;
+}
+
+// Sign up
+
+.signup-panel {
+  border: solid 1px $yellow;
+  border-radius: 5px;
+  margin: 0 35% 0 35%;
+  padding: 25px 18px 25px 6%;
 }
