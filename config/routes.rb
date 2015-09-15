@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   resources :user_profiles
+  resources :user_steps
 
   root to: "home#index"
 
-  devise_for :users, controllers: { sessions: "users/sessions" }
+  devise_for :users, controllers: { registrations: "registrations" }
   
   resources :books
   resources :publishers
