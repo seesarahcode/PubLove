@@ -5,8 +5,6 @@ class UserStepsController < ApplicationController
 
 	def show
 		@user = current_user
-		@user.role = "admin"
-		@user.save
 		@publisher = @user.publisher
 		render_wizard
 	end

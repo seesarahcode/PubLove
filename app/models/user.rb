@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   has_one :profile, class_name: "UserProfile", foreign_key: "user_id"
   has_one :preferences, class_name: "Preference", foreign_key: "user_id"
-  has_one :publisher
+  has_one :publisher, :foreign_key => 'admin_id'
   has_many :tasks
   has_many :assigned_tasks, :class_name => 'Task', :foreign_key => 'assigned_to'
   has_many :owned_tasks, :class_name => 'Task', :foreign_key => 'assigned_by'
@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def create_publisher_for_admin
-    if role == "admin" && self.publisher_id.blank?
+    if self.role == "admin" && self.publisher_id.blank?
       pub = Publisher.create(admin_id: self.id)
       self.publisher_id = pub.id
       self.save

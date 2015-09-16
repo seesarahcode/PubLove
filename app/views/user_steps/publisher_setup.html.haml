@@ -1,33 +1,34 @@
-%h1 Publisher Account
+.signup-panel
+  %h1 Publisher Account
+  %br
+  = form_for @publisher do |f|
+    - if @publisher.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@publisher.errors.count, "error")} prohibited this publisher from being saved:"
+        %ul
+          - @publisher.errors.full_messages.each do |msg|
+            %li= msg
 
-= form_for @publisher do |f|
-  - if @publisher.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@publisher.errors.count, "error")} prohibited this publisher from being saved:"
-      %ul
-        - @publisher.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :street
-    = f.text_field :street
-  .field
-    = f.label :state
-    = f.text_field :state
-  .field
-    = f.label :city
-    = f.text_field :city
-  .field
-    = f.label :zip
-    = f.number_field :zip
-  .field
-    = f.label :phone
-    = f.text_field :phone
-  .field
-    = f.label :website
-    = f.text_field :website
-  .actions
-    = f.submit 'Continue'
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :street
+      = f.text_field :street
+    .field
+      = f.label :city
+      = f.text_field :city
+    .field
+      = f.label :state
+      = f.text_field :state
+    .field
+      = f.label :zip
+      = f.number_field :zip
+    .field
+      = f.label :phone
+      = f.text_field :phone
+    .field
+      = f.label :website
+      = f.text_field :website
+    .actions
+      = f.submit 'Continue'
