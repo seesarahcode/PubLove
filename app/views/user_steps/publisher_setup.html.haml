@@ -1,7 +1,7 @@
 .pub-setup-panel
   %h1 Publisher Account
   %br
-  = form_for @publisher do |f|
+  = form_for @publisher, url: wizard_path do |f|
     - if @publisher.errors.any?
       #error_explanation
         %h2= "#{pluralize(@publisher.errors.count, "error")} prohibited this publisher from being saved:"
