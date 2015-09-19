@@ -1,0 +1,34 @@
+.signup-panel
+  %h2 Sign up
+  %br
+  %p This account will be the admin user for your company. Your admin user will have sole access to your payment and billing information, as well as the ability to sign up for new add-on features.
+  %br
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = devise_error_messages!
+
+    .field
+      = f.label :email
+      %br
+      = f.email_field :email, autofocus: true
+
+    .field
+      = f.label :password 
+      - if @validatable 
+        %em
+          = @minimum_password_length 
+          characters minimum
+        %br
+      = f.password_field :password, autocomplete: "off"
+
+    .field
+      = f.label :password_confirmation
+      %br
+      = f.password_field :password_confirmation, autocomplete: "off"
+
+    = hidden_field(:user, :role, value: "admin")
+
+    .actions
+      = f.submit "Sign up", class: 'btn-warning btn-large'
+  
+    %br
+    = render "devise/shared/links"
