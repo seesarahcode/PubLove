@@ -4,7 +4,7 @@ describe Account do
 	before do 
 		@admin = FactoryGirl.create(:admin)
 		@pub = FactoryGirl.create(:publisher, admin_id: FactoryGirl.create(:admin).id)
-		@account = FactoryGirl.create(:account, admin_id: @admin.id, trial: true)
+		@account = FactoryGirl.create(:account, admin_id: @admin.id)
 	end
 
 	describe "responses" do 
@@ -18,10 +18,6 @@ describe Account do
 	describe "validations" do
 		it "should not be valid without an admin_id" do
 			@account.admin_id = ""
-			@account.should_not be_valid
-		end
-		it "should not be valid without a plan" do
-			@account.plan = ""
 			@account.should_not be_valid
 		end
 	end

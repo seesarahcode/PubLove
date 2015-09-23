@@ -121,6 +121,24 @@ describe User do
 		end
 	end
 
+	describe "#create_account" do
+		before do
+			@account_count = Account.all.count
+		end
+		it "should create an Account after creating a user" do
+			admin = FactoryGirl.create(:admin)
+			Account.all.count.should eq @account_count + 1
+		end
+		it "should create an Account with the right admin_id" do
+			admin = FactoryGirl.create(:admin)
+			Account.last.admin_id.should eq admin.id
+		end
+		it "should not create an account for non-admin users" do
+			pm = FactoryGirl.create(:project_manager)
+			Account.all.count.should eq @account_count
+		end
+	end
+
 	describe "#is_super_admin?" do
 		it "should return true if the user is a super_admin" do
 			@super = FactoryGirl.create(:super_admin)
