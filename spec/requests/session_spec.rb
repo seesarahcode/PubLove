@@ -2,24 +2,27 @@ require 'spec_helper'
 
 describe "User sign in" do
 	context "with valid information" do
+		before do
+			@admin = FactoryGirl.create(:admin)
+			@publisher = @admin.publisher
+		end
 		it "allows existing users to sign in with correct info" do
 			admin = FactoryGirl.create(:admin)
 	    visit new_user_session_path
 	    fill_in "Email",                 :with => admin.email
 	    fill_in "Password",              :with => admin.password
 	    click_button "Log in"
-	    page.should have_content("Signed in successfully.")
+	    page.should have_content("Dashboard")
 		end
 		it "should send admins to the admin dashboard" do
-			admin = FactoryGirl.create(:admin)
 			visit new_user_session_path
-	    fill_in "Email",                 :with => admin.email
-	    fill_in "Password",              :with => admin.password
+	    fill_in "Email",                 :with => @admin.email
+	    fill_in "Password",              :with => @admin.password
 	    click_button "Log in"
 	    page.should have_css('#admin-dash')
 		end
 		it "should send super_admins to the super_admin dashboard" do
-			super_admin = FactoryGirl.create(:super_admin)
+			super_admin = FactoryGirl.create(:super_admin, publisher_id: @publisher.id)
 			visit new_user_session_path
 	    fill_in "Email",                 :with => super_admin.email
 	    fill_in "Password",              :with => super_admin.password
@@ -27,7 +30,7 @@ describe "User sign in" do
 	    page.should have_css('#super-admin-dash')
 		end
 		it "should send pms to the project_manager dashboard" do
-			pm = FactoryGirl.create(:project_manager)
+			pm = FactoryGirl.create(:project_manager, publisher_id: @publisher.id)
 			visit new_user_session_path
 	    fill_in "Email",                 :with => pm.email
 	    fill_in "Password",              :with => pm.password
@@ -35,7 +38,7 @@ describe "User sign in" do
 	    page.should have_css('#pm-dash')
 		end
 		it "should send authors to the author dashboard" do
-			author = FactoryGirl.create(:author)
+			author = FactoryGirl.create(:author, publisher_id: @publisher.id)
 			visit new_user_session_path
 	    fill_in "Email",                 :with => author.email
 	    fill_in "Password",              :with => author.password
@@ -64,13 +67,18 @@ describe "User sign in" do
 end
 
 describe "User sign out" do
+	before do
+		@admin = FactoryGirl.create(:admin)
+		@publisher = @admin.publisher
+	end
 	context "while logged in" do
 		it "should destroy the current user's session" do
-			pm = FactoryGirl.create(:project_manager)
+			pm = FactoryGirl.create(:project_manager, publisher_id: @publisher.id)
 			visit new_user_session_path
 	    fill_in "Email",                 :with => pm.email
 	    fill_in "Password",              :with => pm.password
 	    click_button "Log in"
+	    save_and_open_page
 			click_link "Log Out"
 			page.should have_content("Signed out successfully.")
 		end
