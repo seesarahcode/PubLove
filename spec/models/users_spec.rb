@@ -8,7 +8,7 @@ describe User do
 			:password => "password", 
 			:role => "project_manager", 
 			:publisher_id => @admin.publisher_id)
-		@author = FactoryGirl.create(:author, publisher_id: @admin.publisher_id)
+		@author = FactoryGirl.create(:author, :publisher_id => @admin.publisher_id)
 	end
 
 	describe "responses" do
@@ -39,6 +39,9 @@ describe User do
 		it "should not be valid without a role" do
 			@user.role = ""
 			@user.should_not be_valid
+		end
+		it "should not require a publisher_id for super_admin" do
+			FactoryGirl.create(:super_admin).should be_valid
 		end
 	end
 

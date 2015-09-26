@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :projects, class_name: "Book", :join_table => "book_teams", :conditions => { :role => "project_manager" || "admin"}
 
   validates :role, presence: true
- # validates :publisher_id, presence: true, :if => :not_super?
+  validates :publisher_id, presence: true, :unless => lambda { :is_super_admin || :is_admin? }
 
   def is_super_admin?
   	self.role == "super_admin" ? true : false

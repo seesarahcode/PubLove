@@ -5,7 +5,7 @@ FactoryGirl.define do
     last_name   Faker::Name.last_name
     password    'password'
     password_confirmation { |u| u.password }
-
+    
     factory :super_admin do
       role      "super_admin"
     end
@@ -16,6 +16,10 @@ FactoryGirl.define do
 
     factory :admin do
       role      "admin"
+      after(:create) do |user|
+        pub = FactoryGirl.create(:publisher, admin_id: user.id)
+        user.publisher_id = pub.id
+      end
     end
 
     factory :author do
@@ -26,7 +30,6 @@ FactoryGirl.define do
       role      "team_member"
     end
 
-    
   end
 end
 
