@@ -4,4 +4,18 @@ module ApplicationHelper
 		current_user.publisher_id ? Publisher.find(current_user.publisher_id) : nil
 	end
 
+	def dashboard_link
+		case current_user.role
+		when "super_admin"
+			link_to "Dashboard", super_admin_dashboard_path
+		when "admin"
+			link_to "Dashboard", admin_dashboard_path
+		when "project_manager"
+			link_to "Dashboard", pm_dashboard_path
+		when "author"
+			link_to "Dashboard", author_dashboard_path
+		else
+		end	
+	end
+
 end

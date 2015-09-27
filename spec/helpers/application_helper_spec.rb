@@ -17,4 +17,19 @@ describe ApplicationHelper do
 		end
 	end
 
+	describe "#dashboard_link" do
+		it "should link to SA dashboard " do
+			pending
+		end
+		it "should link to admin dashboard" do
+			pending
+		end
+		it "should link to PM dashboard" do
+			pending
+		end
+		it "should link to author dashboard" do
+			pending
+		end
+	end
+
 end
