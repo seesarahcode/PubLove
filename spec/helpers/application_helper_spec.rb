@@ -19,16 +19,24 @@ describe ApplicationHelper do
 
 	describe "#dashboard_link" do
 		it "should link to SA dashboard " do
-			pending
+			sa = FactoryGirl.create(:super_admin)
+			sign_in(sa)
+			helper.dashboard_link.should eq "<a href=\"/super/dashboard\">Dashboard</a>"
 		end
 		it "should link to admin dashboard" do
-			pending
+			admin = FactoryGirl.create(:admin)
+			sign_in(admin)
+			helper.dashboard_link.should eq "<a href=\"/admin/dashboard\">Dashboard</a>"
 		end
 		it "should link to PM dashboard" do
-			pending
+			pm = FactoryGirl.create(:project_manager)
+			sign_in(pm)
+			helper.dashboard_link.should eq "<a href=\"/pm/dashboard\">Dashboard</a>"
 		end
 		it "should link to author dashboard" do
-			pending
+			author = FactoryGirl.create(:author)
+			sign_in(author)
+			helper.dashboard_link.should eq "<a href=\"/author/dashboard\">Dashboard</a>"
 		end
 	end
 
