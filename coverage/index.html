@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-09-28T23:41:49-05:00">2015-09-28T23:41:49-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-09-29T21:57:49-05:00">2015-09-29T21:57:49-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.12%</span></span>
+    (<span class="covered_percent"><span class="green">99.52%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.75
+         5.7
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>87</b> files in total.
-    <b>1251</b> relevant lines. 
-    <span class="green"><b>1240</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed </span>
+    <b>1260</b> relevant lines. 
+    <span class="green"><b>1254</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -57,7 +57,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>7.2</td>
+        <td>6.8</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#a83bc78200e487ba5ce3db7c523bbf4eebbedb3e" class="src_link" title="app/controllers/user_steps_controller.rb">app/controllers/user_steps_controller.rb</a></td>
-        <td class="red strong">66.67 %</td>
+        <td class="green strong">100.0 %</td>
         <td>23</td>
         <td>15</td>
-        <td>10</td>
-        <td>5</td>
-        <td>1.3</td>
+        <td>15</td>
+        <td>0</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>4.6</td>
+        <td>4.8</td>
       </tr>
       
       <tr>
@@ -327,7 +327,7 @@
         <td>36</td>
         <td>36</td>
         <td>0</td>
-        <td>73.4</td>
+        <td>73.2</td>
       </tr>
       
       <tr>
@@ -873,11 +873,11 @@
       <tr>
         <td class="strong"><a href="#23caccec62b11494c0f7ef85300e72e0d10f117c" class="src_link" title="spec/requests/user_steps_spec.rb">spec/requests/user_steps_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>16</td>
-        <td>16</td>
+        <td>34</td>
+        <td>25</td>
+        <td>25</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -907,7 +907,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>80.3</td>
+        <td>80.0</td>
       </tr>
       
       <tr>
@@ -1022,26 +1022,26 @@
           <code class="ruby">    def configure_devise_permitted_parameters</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="13">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="33" data-linenumber="13">
+          <span class="hits">33</span>
           
           <code class="ruby">      registration_params = [:email, :password, :password_confirmation, :role]</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="14">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="33" data-linenumber="14">
+          <span class="hits">33</span>
           
           <code class="ruby">      if params[:action] == &#39;create&#39;</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="15">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="17" data-linenumber="15">
+          <span class="hits">17</span>
           
           <code class="ruby">        devise_parameter_sanitizer.for(:sign_up) { </code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="16">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="7" data-linenumber="16">
+          <span class="hits">7</span>
           
           <code class="ruby">          |u| u.permit(registration_params) </code>
         </li>
@@ -2246,8 +2246,8 @@
           <code class="ruby">  def after_sign_up_path_for(resource)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    user_steps_path</code>
         </li>
@@ -2499,11 +2499,11 @@
         <div class="source_table" id="a83bc78200e487ba5ce3db7c523bbf4eebbedb3e">
   <div class="header">
     <h3>app/controllers/user_steps_controller.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>15</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -2546,20 +2546,20 @@
           <code class="ruby">	def show</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="7">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
           
           <code class="ruby">		@user = current_user</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">		@publisher = @user.publisher</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
           
           <code class="ruby">		render_wizard</code>
         </li>
@@ -2582,26 +2582,26 @@
           <code class="ruby">	def update</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
           
           <code class="ruby">    @user = current_user</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
           
           <code class="ruby">    @publisher = @user.publisher</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">    @publisher.update_attributes(pub_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
           
           <code class="ruby">    render_wizard @user</code>
         </li>
@@ -2630,8 +2630,8 @@
           <code class="ruby">  def pub_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:publisher).permit(:id, :admin_id, :name, :street, :city, :state, :zip, :phone, :website)</code>
         </li>
@@ -2708,8 +2708,8 @@
           <code class="ruby">	def dashboard_link</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="8">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="8">
+          <span class="hits">15</span>
           
           <code class="ruby">		case current_user.role</code>
         </li>
@@ -2732,8 +2732,8 @@
           <code class="ruby">		when &quot;admin&quot;</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="12">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">			link_to &quot;Dashboard&quot;, admin_dashboard_path</code>
         </li>
@@ -4016,8 +4016,8 @@
           <code class="ruby">  def is_admin?</code>
         </li>
       
-        <li class="covered" data-hits="746" data-linenumber="36">
-          <span class="hits">746</span>
+        <li class="covered" data-hits="744" data-linenumber="36">
+          <span class="hits">744</span>
           
           <code class="ruby">  	self.role == &quot;admin&quot; ? true : false</code>
         </li>
@@ -4088,8 +4088,8 @@
           <code class="ruby">  def create_profile</code>
         </li>
       
-        <li class="covered" data-hits="372" data-linenumber="48">
-          <span class="hits">372</span>
+        <li class="covered" data-hits="371" data-linenumber="48">
+          <span class="hits">371</span>
           
           <code class="ruby">    self.publisher_id.present? ? UserProfile.create(user_id: self.id, publisher_id: self.publisher_id) : UserProfile.create(user_id: self.id)</code>
         </li>
@@ -4112,8 +4112,8 @@
           <code class="ruby">  def create_account</code>
         </li>
       
-        <li class="covered" data-hits="185" data-linenumber="52">
-          <span class="hits">185</span>
+        <li class="covered" data-hits="184" data-linenumber="52">
+          <span class="hits">184</span>
           
           <code class="ruby">    account = Account.create(admin_id: self.id)</code>
         </li>
@@ -4136,26 +4136,26 @@
           <code class="ruby">  def create_publisher_for_admin</code>
         </li>
       
-        <li class="covered" data-hits="185" data-linenumber="56">
-          <span class="hits">185</span>
+        <li class="covered" data-hits="184" data-linenumber="56">
+          <span class="hits">184</span>
           
           <code class="ruby">    if self.publisher_id.blank?</code>
         </li>
       
-        <li class="covered" data-hits="185" data-linenumber="57">
-          <span class="hits">185</span>
+        <li class="covered" data-hits="184" data-linenumber="57">
+          <span class="hits">184</span>
           
           <code class="ruby">      pub = Publisher.create(admin_id: self.id)</code>
         </li>
       
-        <li class="covered" data-hits="185" data-linenumber="58">
-          <span class="hits">185</span>
+        <li class="covered" data-hits="184" data-linenumber="58">
+          <span class="hits">184</span>
           
           <code class="ruby">      self.publisher_id = pub.id</code>
         </li>
       
-        <li class="covered" data-hits="185" data-linenumber="59">
-          <span class="hits">185</span>
+        <li class="covered" data-hits="184" data-linenumber="59">
+          <span class="hits">184</span>
           
           <code class="ruby">      self.save</code>
         </li>
@@ -16253,8 +16253,8 @@
     <h3>spec/requests/user_steps_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>25</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -16283,7 +16283,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">	context &quot;with valid information&quot; do</code>
+          <code class="ruby">	context &quot;on publisher page&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -16292,32 +16292,32 @@
           <code class="ruby">		before do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
           <code class="ruby">			visit new_user_registration_path</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="7">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">	    fill_in &quot;Email&quot;,                 :with =&gt; &quot;mrsimon@schuster.com&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">	    fill_in &quot;Password&quot;,              :with =&gt; &quot;$uperscript&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">	    fill_in &quot;Password confirmation&quot;, :with =&gt; &quot;$uperscript&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">	    click_button &quot;Sign up&quot;</code>
         </li>
@@ -16331,31 +16331,31 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">	  it &quot;should send the user to the publisher page&quot; do</code>
+          <code class="ruby">	  it &quot;should allow the user to submit publisher information&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">	  	pending</code>
+          <code class="ruby">	  	fill_in &quot;Name&quot;,			:with =&gt; &quot;Simon &amp; Schuster&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	  end</code>
+          <code class="ruby">	  	fill_in &quot;Phone&quot;,		:with =&gt; &quot;1-555-888-1010&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">	  it &quot;should allow the user to submit publisher information&quot; do</code>
+          <code class="ruby">	  	fill_in &quot;Website&quot;,	:with =&gt; &quot;www.simonandschuster.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">	  	pending</code>
+          <code class="ruby">	  	click_button &quot;Continue&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -16364,43 +16364,103 @@
           <code class="ruby">	  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="18">
           
-          <code class="ruby">	  it &quot;should send the user to the payment page&quot; do</code>
+          
+          <code class="ruby">	end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">	  	pending</code>
+          <code class="ruby">	context &quot;on payment page&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	  end</code>
+          <code class="ruby">		before do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">			visit new_user_registration_path</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">	context &quot;with invalid information&quot; do</code>
+          <code class="ruby">	    fill_in &quot;Email&quot;,                 :with =&gt; &quot;mrsimon@schuster.com&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    fill_in &quot;Password&quot;,              :with =&gt; &quot;$uperscript&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    fill_in &quot;Password confirmation&quot;, :with =&gt; &quot;$uperscript&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    click_button &quot;Sign up&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	    click_button &quot;Continue&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		it &quot;should allow the user to submit a publisher payment&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">			pending</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	context &quot;with invalid information&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
@@ -16922,8 +16982,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="239" data-linenumber="8">
-          <span class="hits">239</span>
+        <li class="covered" data-hits="238" data-linenumber="8">
+          <span class="hits">238</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -16982,8 +17042,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="239" data-linenumber="18">
-          <span class="hits">239</span>
+        <li class="covered" data-hits="238" data-linenumber="18">
+          <span class="hits">238</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -17006,8 +17066,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="239" data-linenumber="22">
-          <span class="hits">239</span>
+        <li class="covered" data-hits="238" data-linenumber="22">
+          <span class="hits">238</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>
