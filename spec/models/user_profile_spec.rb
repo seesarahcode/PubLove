@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UserProfile do
   before do 
   	@user = FactoryGirl.create(:project_manager)
-  	@user_profile = FactoryGirl.create(:user_profile, user_id: @user.id)
+  	@user_profile = @user.profile
   end
   describe "responses" do
   	subject { @user_profile }
