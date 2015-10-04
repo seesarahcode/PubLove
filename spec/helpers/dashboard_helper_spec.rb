@@ -28,7 +28,7 @@ describe "DashboardHelper" do
 		end
 		it "should return no divs if the 1st begins on a Sunday" do
 			Date.stub(:today) { Date.new(2015,3,1) }
-			helper.calendar_alignment.should eq nil
+			helper.calendar_alignment.should eq ""
 		end
 	end
 end

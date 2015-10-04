@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-02T22:40:28-05:00">2015-10-02T22:40:28-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-03T21:35:24-05:00">2015-10-03T21:35:24-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.69
+         5.73
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>84</b> files in total.
-    <b>1275</b> relevant lines. 
-    <span class="green"><b>1275</b> lines covered</span> and
+    <b>1269</b> relevant lines. 
+    <span class="green"><b>1269</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -153,11 +153,11 @@
       <tr>
         <td class="strong"><a href="#e4d7c45af39a902e2b58f33149fecbc385edadbb" class="src_link" title="app/helpers/dashboard_helper.rb">app/helpers/dashboard_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>10</td>
-        <td>10</td>
+        <td>8</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>12.3</td>
       </tr>
       
       <tr>
@@ -2801,8 +2801,8 @@
     <h3>app/helpers/dashboard_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2831,148 +2831,28 @@
         <li class="covered" data-hits="9" data-linenumber="4">
           <span class="hits">9</span>
           
-          <code class="ruby">		first = Date.today.beginning_of_month.wday</code>
+          <code class="ruby">		number = Date.today.beginning_of_month.wday</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="5">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="38" data-linenumber="5">
+          <span class="hits">38</span>
           
-          <code class="ruby">		case first</code>
+          <code class="ruby">		number.times.collect {content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) }.join(&quot;&quot;) unless number == 7</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">		when 1</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">		when 2</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) # refactor multiples for conciseness</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">		when 3</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">		when 4</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + </code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">		when 5</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">		when 6</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;) + content_tag(:div, &quot;&quot;, class: &quot;date-blank&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">		else</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -10931,7 +10811,7 @@
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">			helper.calendar_alignment.should eq nil</code>
+          <code class="ruby">			helper.calendar_alignment.should eq &quot;&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
