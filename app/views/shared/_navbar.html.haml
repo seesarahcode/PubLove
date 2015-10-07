@@ -12,8 +12,17 @@
 				%ul.nav.navbar-nav.navbar-right
 					%li
 						= dashboard_link
-					%li
-						= link_to "Log Out", destroy_user_session_path, :method => :delete
+					%li.dropdown
+						%a.dropdown-toggle{:href=>"#", :role => "button", :aria => { :haspopup => "true", :expanded => "false"}, :data => {:toggle => "dropdown"} } 
+							Dropdown 
+							%span.caret
+						%ul.dropdown-menu
+							%li Books
+							%li Profile
+							%li Team
+							%li.divider{:role => "separator"}
+							%li
+								= link_to "Log Out", destroy_user_session_path, :method => :delete
 - else	
 	%nav.navbar.navbar-default.navbar-fixed-top.topnav{:role=>"navigation" }
 		%div.container.topnav
