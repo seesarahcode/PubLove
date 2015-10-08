@@ -6,6 +6,11 @@
 
 // Nav bar
 
+.navbar {
+  ul.dropdown-menu {
+    text-align: center;
+  }
+}
 
 .navbar a {	
 	color: $darkTeal !important;	

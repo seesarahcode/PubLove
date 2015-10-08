@@ -2,9 +2,22 @@
 
 $lightTeal: #7fc5c5;
 $yellow: #f8ce4c;
+$lightYellow: #fbe296;
 $darkTeal: #003737;
 
 // Nav bar
-.navbar {
-	background-color: $yellow !important;
-}
+	.navbar {
+		background-color: $yellow !important;
+		.dropdown .open {
+			background-color: $lightYellow;
+		}
+		ul.dropdown-menu {
+			background-color: $lightYellow;
+		}
+	}
+	// Dropdown li
+	.navbar-default .navbar-nav > .open > a, 
+	.navbar-default .navbar-nav > .open > a:hover, 
+	.navbar-default .navbar-nav > .open > a:focus {
+		background-color: $lightYellow !important;
+	}
