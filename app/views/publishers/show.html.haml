@@ -22,6 +22,5 @@
   %b Website:
   = @publisher.website
 
-= link_to 'Edit', edit_publisher_path(@publisher)
-\|
-= link_to 'Back', publishers_path
+-if current_user.is_admin?
+  = link_to 'Edit', edit_publisher_path(@publisher)
