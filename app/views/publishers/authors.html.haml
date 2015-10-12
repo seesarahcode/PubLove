@@ -1,0 +1,22 @@
+%h1 Authors
+
+%table
+  %thead
+    %tr
+      %th First
+      %th Last
+      %th Email
+      %th Books
+      %th
+      %th
+
+  %tbody
+    - @authors.each do |author|
+      %tr
+        %td= author.first_name
+        %td= author.last_name
+        %td= author.email
+        %td
+        %td Show 
+
+%br

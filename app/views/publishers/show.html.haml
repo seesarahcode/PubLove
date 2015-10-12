@@ -22,5 +22,5 @@
   %b Website:
   = @publisher.website
 
--if current_user.is_admin?
+-if @user.is_admin?
   = link_to 'Edit', edit_publisher_path(@publisher)

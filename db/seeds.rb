@@ -26,7 +26,7 @@ book1 = Book.new(title: "All the Pretty Pages",
 book1.save
 author1 = User.new(email: "brilliant_author@gmail.com", 
     password: "password", password_confirmation: "password", 
-    role: "author")
+    role: "author", publisher_id: pub1.id)
 author1.save
 
 

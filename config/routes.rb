@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" }
   get 'profile', to: 'user_profiles#show', as: 'profile'
+  get 'authors', to: 'publishers#authors', as: 'authors'
 
   resources :books
   resources :publishers

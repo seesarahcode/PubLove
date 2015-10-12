@@ -9,6 +9,7 @@ class PublishersController < ApplicationController
   end
 
   def show
+    @user = current_user
     respond_with(@publisher)
   end
 
@@ -35,6 +36,10 @@ class PublishersController < ApplicationController
       redirect_to root_path
       flash[:notice] = "Your publisher account was deleted."
     end
+  end
+
+  def authors
+    @authors = User.where(role: "author", publisher_id: @publisher.id)
   end
 
   private
