@@ -85,5 +85,19 @@ describe PublishersController do
     end
   end
 
+  describe "GET authors" do
+    before :each do
+      get :authors
+    end
+    it "should respond with success" do
+      expect(response.status).to eq 200
+    end
+    it "assigns all of a publisher's authors as @authors" do
+      @publisher = Publisher.last
+      @authors = User.where(role: "author", publisher_id: @publisher.id)
+      assigns(:authors).should eq(@authors)
+    end
+  end
+
 
 end
