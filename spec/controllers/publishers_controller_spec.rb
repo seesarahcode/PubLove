@@ -97,6 +97,9 @@ describe PublishersController do
       @authors = User.where(role: "author", publisher_id: @publisher.id)
       assigns(:authors).should eq(@authors)
     end
+    it "should test something" do 
+      pending
+    end
   end
 
 
