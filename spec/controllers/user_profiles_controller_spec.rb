@@ -7,22 +7,6 @@ describe UserProfilesController do
     @user_profile = FactoryGirl.create(:user_profile, user_id: @user.id)
   end
 
-  describe "GET index" do
-    before :each do
-      get :index
-    end
-    it "should respond with success" do
-      expect(response.status).to eq 200
-    end
-    it "assigns all user_profiles as @user_profiles" do
-      @user_profiles = UserProfile.all
-      assigns(:user_profiles).should eq(@user_profiles)
-    end
-    it "should only be accessible to a super_admin" do 
-      pending
-    end
-  end
-
   describe "GET show" do
     before :each do
       get :show, id: @user_profile.id
