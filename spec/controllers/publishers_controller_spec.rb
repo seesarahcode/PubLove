@@ -5,6 +5,7 @@ describe PublishersController do
   before :each do 
     @admin = FactoryGirl.create(:admin)
     @publisher = FactoryGirl.create(:publisher, admin_id: @admin.id)
+    sign_in(@admin)
   end
 
   describe "GET index" do
@@ -93,12 +94,7 @@ describe PublishersController do
       expect(response.status).to eq 200
     end
     it "assigns all of a publisher's authors as @authors" do
-      @publisher = Publisher.last
-      @authors = User.where(role: "author", publisher_id: @publisher.id)
-      assigns(:authors).should eq(@authors)
-    end
-    it "should test something" do 
-      pending
+      assigns(:authors).should eq @authors
     end
   end
 
