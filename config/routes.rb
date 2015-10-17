@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   devise_for :users, controllers: { registrations: "registrations" }
-  get 'profile', to: 'user_profiles#show', as: 'profile'
   get 'authors', to: 'publishers#authors', as: 'authors'
+
+  resources :user_profiles, only: [:index, :new, :create, :destroy]
+  get 'profile', to: 'user_profiles#show', as: 'profile'
+  get 'edit_profile', to: 'user_profiles#edit', as: 'edit_profile'
 
   resources :books
   resources :publishers

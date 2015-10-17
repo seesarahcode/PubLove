@@ -3,8 +3,10 @@ require 'spec_helper'
 describe UserProfilesController do
 
   before do
-    @user = FactoryGirl.create(:project_manager)
+    @admin = FactoryGirl.create(:admin)
+    @user = FactoryGirl.create(:project_manager, publisher_id: @admin.publisher_id)
     @user_profile = FactoryGirl.create(:user_profile, user_id: @user.id)
+    sign_in(@user)
   end
 
   describe "GET show" do

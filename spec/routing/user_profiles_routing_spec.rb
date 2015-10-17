@@ -8,7 +8,7 @@ describe UserProfilesController do
     end
 
     it "routes to #show" do
-      get("/user_profiles/1").should route_to("user_profiles#show", :id => "1")
+      get("/profile/1").should route_to("user_profiles#show", :id => "1")
     end
 
     it "routes to #edit" do
