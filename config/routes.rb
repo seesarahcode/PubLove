@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   get 'authors', to: 'publishers#authors', as: 'authors'
 
-  resources :user_profiles, only: [:index, :new, :create, :destroy]
-  get 'profile', to: 'user_profiles#show', as: 'profile'
-  get 'edit_profile', to: 'user_profiles#edit', as: 'edit_profile'
+  resources :user_profiles, only: [:index, :new, :edit, :update, :create, :destroy]
+  get 'profile/:id', to: 'user_profiles#show', as: 'profile'
 
   resources :books
   resources :publishers
