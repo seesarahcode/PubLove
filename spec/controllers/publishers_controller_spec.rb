@@ -32,6 +32,8 @@ describe PublishersController do
       expect(response.status).to eq 200
     end
     it "assigns the requested publisher as @publisher" do
+      @publisher = Publisher.last
+      @authors = User.where(role: "author", publisher_id: @publisher.id)
       assigns(:publisher).should eq(@publisher)
     end
   end
