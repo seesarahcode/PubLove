@@ -51,4 +51,15 @@ describe ApplicationController do
 			end
 		end
 	end
+
+	describe "set current publisher" do
+		it "should set a @publisher for the current user" do
+			admin = FactoryGirl.create(:admin)
+			sign_in(admin)
+			assigns(:publisher)
+		end
+		it "should not set a publisher if user isn't signed in" do
+			pending
+		end
+	end
 end

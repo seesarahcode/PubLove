@@ -94,7 +94,6 @@ describe PublishersController do
       expect(response.status).to eq 200
     end
     it "assigns all of a publisher's authors as @authors" do
-      @publisher = Publisher.find(@admin.publisher_id)
       assigns(:authors)
     end
   end

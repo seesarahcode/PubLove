@@ -3,11 +3,6 @@ class UserProfilesController < ApplicationController
 
   respond_to :html
 
-  def index
-    @user_profiles = UserProfile.all
-    respond_with(@user_profiles)
-  end
-
   def show
     respond_with(@user_profile)
   end
