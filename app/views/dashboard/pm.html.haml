@@ -8,18 +8,18 @@
 						%tr 
 						- if book.sku
 							%td
-								= book.sku
+								= link_to "#{book.sku}", book_path(book)
 							%td
-								= book.title
+								= link_to "#{book.title}", book_path(book)
 							%td
-								= book.pub_year
+								= link_to "#{book.pub_year}", book_path(book)
 							%td
 								= book.authors.join(", ")
 						- else
 							%td
-								= book.title
+								= link_to "#{book.title}", book_path(book)
 							%td
-								= book.pub_year
+								= link_to "#{book.pub_year}", book_path(book)
 							%td
 								= book.authors.join(", ")
 		.col-md-1
