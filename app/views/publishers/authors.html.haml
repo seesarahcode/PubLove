@@ -6,8 +6,6 @@
       %th First
       %th Last
       %th Email
-      %th Books
-      %th
       %th
 
   %tbody
@@ -16,7 +14,9 @@
         %td= author.first_name
         %td= author.last_name
         %td= author.email
-        %td
         %td Show 
+      %tr
+        %td
+          = author.books.join(", ")
 
 %br
