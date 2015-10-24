@@ -24,34 +24,36 @@
 								= book.authors.join(", ")
 		.col-md-1
 		.col-md-9
-			.notifications
-				%h3 Notifications
-				%ul
-					%li J.K. Rowling has uploaded a draft
-					%li Kate completed the Interior Design task
-					%li Ted McGillicutty's first draft is overdue
-			#data-viz
-				%h3 Season Progress
-				%p You don't have any projects to track. Why don't you add one?
-			.today
-				%h3 Today
-				%p 9:30 Phone call with Dave
-				%p 1:00 Meeting with Stella
-			.calendar
-				%h3 
-					= Time.now.strftime("%B")
-				.calendar-frame
-					.day-names
-						%p  Sa
-						%p  M
-						%p  T
-						%p  W
-						%p  Th
-						%p  F
-						%p  Sa
-					.month-days
-						= calendar_alignment
-						- (1..Time.days_in_month(Time.now.strftime("%-m").to_i)).each do |day|
-							%div.date 
-								= day
+			.dashboard-row-1
+				.notifications
+					%h3 Notifications
+					%ul
+						%li J.K. Rowling has uploaded a draft
+						%li Kate completed the Interior Design task
+						%li Ted McGillicutty's first draft is overdue
+				#data-viz
+					%h3 Season Progress
+					%p You don't have any projects to track. Why don't you add one?
+			.dashboard-row-2
+				.today
+					%h3 Today
+					%p 9:30 Phone call with Dave
+					%p 1:00 Meeting with Stella
+				.calendar
+					%h3 
+						= Time.now.strftime("%B")
+					.calendar-frame
+						.day-names
+							%p  Sa
+							%p  M
+							%p  T
+							%p  W
+							%p  Th
+							%p  F
+							%p  Sa
+						.month-days
+							= calendar_alignment
+							- (1..Time.days_in_month(Time.now.strftime("%-m").to_i)).each do |day|
+								%div.date 
+									= day
 		%br

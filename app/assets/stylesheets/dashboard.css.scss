@@ -69,6 +69,28 @@
 	}
 }
 
+.dashboard-row-1 {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	.notifications {
+		width: 50%;
+	}
+	#data-viz {
+		width: 50%;
+	}
+}
+
+.dashboard-row-2 {
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	.today {
+		width: 50%;
+	}
+	.calendar {
+		width: 50%;
+	}
+}
+
 // Author Dashboard
 
 
