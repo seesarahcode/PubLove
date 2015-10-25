@@ -28,6 +28,9 @@ author1 = User.new(email: "brilliant_author@gmail.com",
     password: "password", password_confirmation: "password", 
     role: "author", publisher_id: pub1.id)
 author1.save
+event = Event.new(event_type: "Phone call", date: Date.today, time: Time.now,
+    description: "Phone call with J.K. Rowling")
+event.save
 
 
 admin2 = User.new(email: "lil_book_ceo@gmail.com",
