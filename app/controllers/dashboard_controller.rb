@@ -11,6 +11,7 @@ class DashboardController < ApplicationController
 
   def pm
     @books = @publisher.books
+    @events = Event.where(date: Date.today)
   	render :pm
   end
 
