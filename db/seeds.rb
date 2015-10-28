@@ -31,7 +31,9 @@ author1.save
 event = Event.new(event_type: "Phone call", date: Date.today, time: Time.now,
     description: "Phone call with J.K. Rowling")
 event.save
-
+event2 = Event.new(event_type: "Meeting", date: Date.today, time: Time.now, 
+    description: "Cover meeting with Dave")
+event2.save
 
 admin2 = User.new(email: "lil_book_ceo@gmail.com",
     password: "password", password_confirmation: "password",
