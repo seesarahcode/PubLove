@@ -28,12 +28,11 @@ author1 = User.new(email: "brilliant_author@gmail.com",
     password: "password", password_confirmation: "password", 
     role: "author", publisher_id: pub1.id)
 author1.save
-event = Event.new(event_type: "Phone call", date: Date.today, time: Time.now,
+(Date.new(2015, 10, 01)..Date.new(2016, 10, 01)).each do |date|
+    event = Event.new(event_type: "Phone call", date: date, time: Time.now.to_s(:time),
     description: "Phone call with J.K. Rowling")
-event.save
-event2 = Event.new(event_type: "Meeting", date: Date.today, time: Time.now, 
-    description: "Cover meeting with Dave")
-event2.save
+    event.save
+end
 
 admin2 = User.new(email: "lil_book_ceo@gmail.com",
     password: "password", password_confirmation: "password",
