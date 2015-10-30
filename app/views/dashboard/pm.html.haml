@@ -33,8 +33,8 @@
 						%li Ted McGillicutty's first draft is overdue
 				.today
 					%h3 Today
-					%p 9:30 Phone call with Dave
-					%p 1:00 Meeting with Stella
+					-@events.each do |event|
+						%p= event.time  event.event_type with Dave
 			.col-md-1
 			.col-md-4
 				#data-viz
