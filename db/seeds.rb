@@ -28,9 +28,9 @@ author1 = User.new(email: "brilliant_author@gmail.com",
     password: "password", password_confirmation: "password", 
     role: "author", publisher_id: pub1.id)
 author1.save
-(Date.new(2015, 10, 01)..Date.new(2016, 10, 01)).each do |date|
+Date.new(2015, 10, 01).upto(Date.new(2016, 10, 01)) do |date|
     event = Event.new(event_type: "Phone call", date: date, time: Time.now.to_s(:time),
-    description: "Phone call with J.K. Rowling")
+    title: "Phone call with J.K. Rowling")
     event.save
 end
 

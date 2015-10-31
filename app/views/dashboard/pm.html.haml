@@ -34,7 +34,8 @@
 				.today
 					%h3 Today
 					-@events.each do |event|
-						%p= event.time  event.event_type with Dave
+						%p= event.time  
+						%p= event.event_type with Dave
 			.col-md-1
 			.col-md-4
 				#data-viz
