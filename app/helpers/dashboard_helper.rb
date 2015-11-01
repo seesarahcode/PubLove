@@ -6,4 +6,10 @@ module DashboardHelper
 		return content.html_safe
 	end
 
+	def event_attendees(attendees)
+		# iterate through attendees
+		# create a list of their names
+		# return string of their names
+	end
+
 end
