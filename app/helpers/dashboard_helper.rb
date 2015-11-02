@@ -6,10 +6,13 @@ module DashboardHelper
 		return content.html_safe
 	end
 
-	def event_attendees(attendees)
-		# iterate through attendees
-		# create a list of their names
-		# return string of their names
+	def event_attendees(current_user, attendees)
+		attendees.each do |person|
+			unless person = current_user
+				# create a list of their names
+			end
+			# return string of their names
+		end	
 	end
 
 end
