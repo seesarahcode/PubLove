@@ -32,6 +32,10 @@ Date.new(2015, 10, 01).upto(Date.new(2016, 10, 01)) do |date|
     event = Event.new(event_type: "Phone call", date: date, time: Time.now.to_s(:time),
     title: "Phone call with J.K. Rowling")
     event.save
+    event_att1 = EventAttendee.new(event_id: event.id, user_id: pm1.id)
+    event_att2 = EventAttendee.new(event_id: event.id, user_id: author1.id)
+    event_att1.save
+    event_att2.save
 end
 
 admin2 = User.new(email: "lil_book_ceo@gmail.com",
