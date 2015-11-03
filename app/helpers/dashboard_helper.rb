@@ -7,11 +7,13 @@ module DashboardHelper
 	end
 
 	def event_attendees(current_user, attendees)
+		names = []
 		attendees.each do |person|
 			unless person = current_user
-				# create a list of their names
+				p = User.find(attendee.user_id)
+				names << p.first_name
 			end
-			# return string of their names
+			names.join(,)
 		end	
 	end
 
