@@ -9,10 +9,11 @@ module DashboardHelper
 	def event_attendees(current_user, attendees)
 		names = []
 		attendees.each do |person|
-			unless person = current_user
+			unless person.user_id = current_user.id
 				p = User.find(attendee.user_id)
 				names << p.first_name
 			end
+			# to-do: return a link to the person's profile
 			names.join(,)
 		end	
 	end
