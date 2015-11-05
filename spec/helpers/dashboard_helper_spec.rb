@@ -31,4 +31,21 @@ describe "DashboardHelper" do
 			helper.calendar_alignment.should eq ""
 		end
 	end
+	describe "#event_attendees" do
+		before do 
+
+		end
+		it "should receive a current user object" do
+			pending
+		end
+		it "should receive all event_attendees for an event" do
+			pending
+		end
+		it "should not return the current user's name" do
+			pending
+		end
+		it "should return a list of names" do
+			pending
+		end
+	end
 end

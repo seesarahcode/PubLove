@@ -35,6 +35,9 @@ describe DashboardController do
       get 'pm'
       response.should be_success
     end
+    it "assigns events" do
+      pending
+    end
   end
 
   describe "GET 'author'" do
