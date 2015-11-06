@@ -31,7 +31,7 @@ describe "DashboardHelper" do
 			helper.calendar_alignment.should eq ""
 		end
 	end
-	describe "#event_attendees" do
+	describe "#event_attendee_names" do
 		before do 
 
 		end
