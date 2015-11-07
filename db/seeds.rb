@@ -18,7 +18,7 @@ pub1.update_attributes(name: "Booksly & Wordwood",
     phone: "800-555-4893", website: "www.bookslyandwordwood.com")
 pm1 = User.new(email: "writefastedithard@gmail.com", 
     password: "password", password_confirmation: "password", 
-    role: "project_manager", publisher_id: pub1.id)
+    role: "project_manager", publisher_id: pub1.id, first_name: "Gloria", last_name: "Steinem")
 pm1.save
 book1 = Book.new(title: "All the Pretty Pages", 
     isbn: "978-3-16-148410-0", sku: "80001-1A", 
@@ -26,7 +26,7 @@ book1 = Book.new(title: "All the Pretty Pages",
 book1.save
 author1 = User.new(email: "brilliant_author@gmail.com", 
     password: "password", password_confirmation: "password", 
-    role: "author", publisher_id: pub1.id)
+    role: "author", publisher_id: pub1.id, first_name: "J.K.", last_name: "Rowling")
 author1.save
 Date.new(2015, 10, 01).upto(Date.new(2016, 10, 01)) do |date|
     event = Event.new(event_type: "Phone call", date: date, time: Time.now.to_s(:time),

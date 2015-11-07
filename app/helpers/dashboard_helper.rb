@@ -6,7 +6,7 @@ module DashboardHelper
 		return content.html_safe
 	end
 
-	def event_attendee_names(current_user, event)
+	def event_attendee_names(event)
 		names = []
 		event.attendees.each do |person|
 			unless person.id == current_user.id
