@@ -10,7 +10,7 @@ module DashboardHelper
 		names = []
 		event.attendees.each do |person|
 			unless person.id == current_user.id
-				names << person.first_name
+				names << person.full_name
 			end
 			# to-do: return a link to the person's profile
 		end	
