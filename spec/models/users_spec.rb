@@ -18,6 +18,7 @@ describe User do
 		it { should respond_to(:role) }
 		it { should respond_to(:first_name) }
 		it { should respond_to(:last_name) }
+		it { should respond_to(:full_name)}
 	end
 
 	describe "validations" do
@@ -189,6 +190,12 @@ describe User do
 		end
 		it "should return false if the user is not an author" do
 			@user.is_author?.should eq false
+		end
+	end
+
+	describe "#full_name" do
+		it "should insert a space between the first & last name" do
+			pending
 		end
 	end
 end
