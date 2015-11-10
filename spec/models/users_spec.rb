@@ -7,7 +7,9 @@ describe User do
 			:email => "editor@lilpublisher.com", 
 			:password => "password", 
 			:role => "project_manager", 
-			:publisher_id => @admin.publisher_id)
+			:publisher_id => @admin.publisher_id, 
+			:first_name => "Marian", 
+			:last_name => "Bookley")
 		@author = FactoryGirl.create(:author, :publisher_id => @admin.publisher_id)
 	end
 
@@ -195,7 +197,7 @@ describe User do
 
 	describe "#full_name" do
 		it "should insert a space between the first & last name" do
-			pending
+			@user.full_name.should eq "Marian Bookley"
 		end
 	end
 end
