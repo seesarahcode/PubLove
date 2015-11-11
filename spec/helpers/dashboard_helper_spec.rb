@@ -33,10 +33,11 @@ describe "DashboardHelper" do
 	end
 	describe "#event_attendee_names" do
 		before do 
-
-		end
-		it "should receive a current user object" do
-			pending
+			@pm = FactoryGirl.create(:project_manager)
+			@author = FactoryGirl.create(:author)
+			@event = FactoryGirl.create(:event)
+			@attendee1 = FactoryGirl.create(:event_attendee, user_id: @pm.id, event_id: @event.id)
+			@attendee2 = FactoryGirl.create(:event_attendee, user_id: @author.id, event_id: @event.id)
 		end
 		it "should receive all event_attendees for an event" do
 			pending
