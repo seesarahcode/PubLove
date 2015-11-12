@@ -38,12 +38,13 @@ describe "DashboardHelper" do
 			@event = FactoryGirl.create(:event)
 			@attendee1 = FactoryGirl.create(:event_attendee, user_id: @pm.id, event_id: @event.id)
 			@attendee2 = FactoryGirl.create(:event_attendee, user_id: @author.id, event_id: @event.id)
+			sign_in(@pm)
 		end
-		it "should receive all event_attendees for an event" do
-			pending
+		it "should receive all an event" do
+			helper.event_attendee_names(@event).should be_valid
 		end
 		it "should not return the current user's name" do
-			pending
+			helper.event_attendee_names(@event).should_not eq @pm.full_name
 		end
 		it "should return a list of names" do
 			pending
