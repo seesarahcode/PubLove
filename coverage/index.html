@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-29T17:02:34-08:00">2015-11-29T17:02:34-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-29T18:14:57-08:00">2015-11-29T18:14:57-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>84</b> files in total.
-    <b>1303</b> relevant lines. 
-    <span class="green"><b>1303</b> lines covered</span> and
+    <b>1304</b> relevant lines. 
+    <span class="green"><b>1304</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -307,7 +307,7 @@
         <td>38</td>
         <td>38</td>
         <td>0</td>
-        <td>73.3</td>
+        <td>73.4</td>
       </tr>
       
       <tr>
@@ -657,7 +657,7 @@
         <td>20</td>
         <td>20</td>
         <td>0</td>
-        <td>56.3</td>
+        <td>56.4</td>
       </tr>
       
       <tr>
@@ -763,11 +763,11 @@
       <tr>
         <td class="strong"><a href="#99c511e68a4e9e3e70ba1fc9b86461427803a34d" class="src_link" title="spec/models/preference_spec.rb">spec/models/preference_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>20</td>
-        <td>20</td>
+        <td>31</td>
+        <td>21</td>
+        <td>21</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -877,7 +877,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>83.7</td>
+        <td>84.0</td>
       </tr>
       
       <tr>
@@ -3842,8 +3842,8 @@
           <code class="ruby">  validates :role, presence: true</code>
         </li>
       
-        <li class="covered" data-hits="598" data-linenumber="25">
-          <span class="hits">598</span>
+        <li class="covered" data-hits="599" data-linenumber="25">
+          <span class="hits">599</span>
           
           <code class="ruby">  validates :publisher_id, presence: true, :unless =&gt; lambda { :is_super_admin || :is_admin? }</code>
         </li>
@@ -3908,8 +3908,8 @@
           <code class="ruby">  def is_admin?</code>
         </li>
       
-        <li class="covered" data-hits="780" data-linenumber="36">
-          <span class="hits">780</span>
+        <li class="covered" data-hits="782" data-linenumber="36">
+          <span class="hits">782</span>
           
           <code class="ruby">  	self.role == &quot;admin&quot; ? true : false</code>
         </li>
@@ -3980,8 +3980,8 @@
           <code class="ruby">  def create_profile</code>
         </li>
       
-        <li class="covered" data-hits="389" data-linenumber="48">
-          <span class="hits">389</span>
+        <li class="covered" data-hits="390" data-linenumber="48">
+          <span class="hits">390</span>
           
           <code class="ruby">    self.publisher_id.present? ? UserProfile.create(user_id: self.id, publisher_id: self.publisher_id) : UserProfile.create(user_id: self.id)</code>
         </li>
@@ -10328,8 +10328,8 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="339" data-linenumber="3">
-          <span class="hits">339</span>
+        <li class="covered" data-hits="340" data-linenumber="3">
+          <span class="hits">340</span>
           
           <code class="ruby">    sequence(:email) { |n| &quot;bookmaker#{n}@lilpub.com&quot; }</code>
         </li>
@@ -10352,8 +10352,8 @@
           <code class="ruby">    password    &#39;password&#39;</code>
         </li>
       
-        <li class="covered" data-hits="387" data-linenumber="7">
-          <span class="hits">387</span>
+        <li class="covered" data-hits="388" data-linenumber="7">
+          <span class="hits">388</span>
           
           <code class="ruby">    password_confirmation { |u| u.password }</code>
         </li>
@@ -12977,8 +12977,8 @@
     <h3>spec/models/preference_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -13010,14 +13010,14 @@
           <code class="ruby">  before do </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="5">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="5">
+          <span class="hits">6</span>
           
           <code class="ruby">  	@user = FactoryGirl.create(:project_manager)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
           
           <code class="ruby">  	@preferences = FactoryGirl.create(:preference, user_id: @user.id)</code>
         </li>
@@ -13034,8 +13034,8 @@
           <code class="ruby">  describe &quot;responses&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
           
           <code class="ruby">  	subject { @preferences }</code>
         </li>
@@ -13052,115 +13052,121 @@
           <code class="ruby">		it { should respond_to(:theme) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { should respond_to(:time_zone)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &quot;validations&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  	it &quot;should not be valid without a user&quot; do</code>
+          <code class="ruby">  describe &quot;validations&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  		@preferences.user_id = nil</code>
+          <code class="ruby">  	it &quot;should not be valid without a user&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  		@preferences.should_not be_valid</code>
+          <code class="ruby">  		@preferences.user_id = nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  	end</code>
+          <code class="ruby">  		@preferences.should_not be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  	end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">  describe &quot;associations&quot; do</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  	context &quot;to user&quot; do</code>
+          <code class="ruby">  describe &quot;associations&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">			it &quot;should return a Preference record for .preference&quot; do</code>
+          <code class="ruby">  	context &quot;to user&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
+          <code class="ruby">			it &quot;should return a Preference record for .preference&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
           <code class="ruby">				@user.preferences.should be_a_kind_of(Preference)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">			end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">			it &quot;should be included in the results for user.profile&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">				@user.preferences.should_not be_nil</code>
+          <code class="ruby">			it &quot;should be included in the results for user.profile&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">				@user.preferences.id.should eq @preferences.id</code>
+          <code class="ruby">				@user.preferences.should_not be_nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">			end</code>
+          <code class="ruby">				@user.preferences.id.should eq @preferences.id</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">		end</code>
+          <code class="ruby">			end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">		end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
@@ -17078,8 +17084,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="249" data-linenumber="8">
-          <span class="hits">249</span>
+        <li class="covered" data-hits="250" data-linenumber="8">
+          <span class="hits">250</span>
           
           <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
@@ -17138,8 +17144,8 @@
           <code class="ruby">  config.before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="249" data-linenumber="18">
-          <span class="hits">249</span>
+        <li class="covered" data-hits="250" data-linenumber="18">
+          <span class="hits">250</span>
           
           <code class="ruby">    DatabaseCleaner.start</code>
         </li>
@@ -17162,8 +17168,8 @@
           <code class="ruby">  config.after(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="249" data-linenumber="22">
-          <span class="hits">249</span>
+        <li class="covered" data-hits="250" data-linenumber="22">
+          <span class="hits">250</span>
           
           <code class="ruby">    DatabaseCleaner.clean</code>
         </li>

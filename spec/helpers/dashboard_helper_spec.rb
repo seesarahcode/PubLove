@@ -41,8 +41,6 @@ describe "DashboardHelper" do
 			sign_in(@pm)
 		end
 		it "should not return the current user's name" do
-			puts @author.full_name
-			puts @pm.full_name
 			helper.event_attendee_names(@event).should_not eq @pm.full_name
 		end
 		it "should return a list of names" do

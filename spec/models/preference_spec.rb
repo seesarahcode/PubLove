@@ -9,6 +9,7 @@ describe Preference do
   	subject { @preferences }
 		it { should respond_to(:user_id) }
 		it { should respond_to(:theme) }
+    it { should respond_to(:time_zone)}
   end
   describe "validations" do
   	it "should not be valid without a user" do
