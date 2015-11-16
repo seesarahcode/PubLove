@@ -1,10 +1,12 @@
-%h1 Listing books
+%h1 Books
 
-%table
+= link_to 'New Book', new_book_path
+
+%table.books
   %thead
     %tr
       %th Title
-      %th Isbn
+      %th ISBN
       %th Sku
       %th Pub year
       %th
@@ -24,4 +26,4 @@
 
 %br
 
-= link_to 'New Book', new_book_path
+
