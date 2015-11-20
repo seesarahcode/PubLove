@@ -13,15 +13,16 @@ $darkTeal: #003737;
 	border: solid 1px;
 	border-radius: 3px;
 	padding: 5px 10px;
-	:hover {
-		text-decoration: none;
-	}
+	text-decoration: none !important;
 }
 
 
 
 // Invites
 
-.invite-author-btn {
-
+.invite-au-btn {
+	border: solid 1px;
+	border-radius: 3px;
+	padding: 5px 10px;
+	text-decoration: none !important;
 }
