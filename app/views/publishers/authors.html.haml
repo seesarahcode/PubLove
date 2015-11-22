@@ -1,12 +1,13 @@
 %h1 Authors
 
-%p Filter:
-%select{:name=>"post[:my_authors]"} 
-  %option{:value=>""}
-  %option{:value=>"1", :selected=>"selected"} My Authors
-  %option{:value=>"2"} All Authors
-  %option{:value=>"3"}
-%a.invite-au-btn{href: ""} Invite New Author
+.search-bar-aus
+  %p Filter:
+  %select{:name=>"post[:my_authors]"} 
+    %option{:value=>""}
+    %option{:value=>"1", :selected=>"selected"} My Authors
+    %option{:value=>"2"} All Authors
+    %option{:value=>"3"}
+  %a.invite-au-btn{href: ""} Invite New Author
 
 %table.authors
   %thead
