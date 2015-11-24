@@ -40,4 +40,13 @@ describe ApplicationHelper do
 		end
 	end
 
+	describe "#publisher_name" do
+		it "should take an id" do
+			pending
+		end
+		it "should return the name of the publisher" do
+			pending
+		end
+	end
+
 end

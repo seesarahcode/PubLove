@@ -18,4 +18,8 @@ module ApplicationHelper
 		end	
 	end
 
+	def publisher_name(pub_id)
+		Publisher.find(pub_id).name
+	end
+
 end
