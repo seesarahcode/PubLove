@@ -41,11 +41,9 @@ describe ApplicationHelper do
 	end
 
 	describe "#publisher_name" do
-		it "should take an id" do
-			pending
-		end
 		it "should return the name of the publisher" do
-			pending
+			up = UserProfile.find_by_user_id(@user.id)
+			helper.publisher_name(up.publisher_id).should eq @pub.name
 		end
 	end
 
