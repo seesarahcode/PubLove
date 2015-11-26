@@ -3,24 +3,29 @@
 -if @user_profile.user_id == current_user.id
   %p Edit Profile
 
-%p
-  %b Name:
-  = @user_profile.user_id
-%p A 
-= @user_profile.title
-at
-= publisher_name(@user_profile.publisher_id)
+.profile
+  %p
+    %b Name:
+    = full_name(@user_profile.user_id)
+  -if @user_profile.title
+    %p A 
+    = @user_profile.title
+    at
+    = publisher_name(@user_profile.publisher_id)
+  -else
+    %p Works at 
+    = publisher_name(@user_profile.publisher_id)
 
-%p
-  %b Start date:
-  = @user_profile.start_date
-%p
-  %b Bio:
-  = @user_profile.bio
-%p
-  %b Favorite books:
-  = @user_profile.favorite_books
-%p
-  %b Phone:
-  = @user_profile.phone
+  %p
+    %b Start date:
+    = @user_profile.start_date
+  %p
+    %b Bio:
+    = @user_profile.bio
+  %p
+    %b Favorite books:
+    = @user_profile.favorite_books
+  %p
+    %b Phone:
+    = @user_profile.phone
 

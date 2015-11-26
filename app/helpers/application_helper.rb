@@ -18,6 +18,10 @@ module ApplicationHelper
 		end	
 	end
 
+	def full_name(user)
+		User.find(user).full_name
+	end
+
 	def publisher_name(pub_id)
 		Publisher.find(pub_id).name
 	end
