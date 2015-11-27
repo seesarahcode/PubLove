@@ -40,6 +40,13 @@ describe ApplicationHelper do
 		end
 	end
 
+	describe "#full_name" do
+		it "should return the full name of the user" do
+			rando = FactoryGirl.create(:project_manager)
+			helper.full_name(rando).should eq "#{rando.first_name} #{rando.last_name}"
+		end 
+	end
+
 	describe "#publisher_name" do
 		it "should return the name of the publisher" do
 			up = UserProfile.find_by_user_id(@user.id)
