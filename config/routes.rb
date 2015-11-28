@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'pm/dashboard/', to: 'dashboard#pm', as: 'pm_dashboard'
   get 'author/dashboard/', to: 'dashboard#author', as: 'author_dashboard'
 
+  resources :user_account, only: [:show, :edit, :update]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
