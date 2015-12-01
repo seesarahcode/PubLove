@@ -3,7 +3,7 @@ class UserAccountController < ApplicationController
 	before_action :set_user
 
   def show
-  	
+  	@preferences = @user.preferences
   end
 
   def edit

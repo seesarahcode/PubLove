@@ -1,1 +1,11 @@
+%h1 Your Account
+
 = link_to "Edit Account", edit_user_account_path(@user)
+
+%table
+  %tr
+    %td Theme
+    %td= @preferences.theme
+  %tr
+    %td Time Zone
+    %td= @preferences.time_zone
