@@ -5,7 +5,7 @@
 %table
   %tr
     %td Theme
-    %td= @preferences.theme
+    %td= @preferences.theme if @preferences
   %tr
     %td Time Zone
-    %td= @preferences.time_zone
+    %td= @preferences.time_zone if @preferences
