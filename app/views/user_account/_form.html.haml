@@ -1,0 +1,17 @@
+= form_for @preferences do |f|
+  - if @preferences.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@preferences.errors.count, "error")} prohibited this preference from being saved:"
+      %ul
+        - @preferences.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :theme
+    // f.select :title
+  .field
+    = f.label :time_zone
+    // f.select :time_zone
+
+  .actions
+    = f.submit 'Save'
