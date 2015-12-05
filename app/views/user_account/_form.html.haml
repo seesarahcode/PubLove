@@ -11,7 +11,7 @@
     // f.select :title
   .field
     = f.label :time_zone
-    // f.select :time_zone
+    = f.time_zone_select( "user", "time_zone", nil, include_blank: true)
 
   .actions
     = f.submit 'Save'
