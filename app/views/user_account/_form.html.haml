@@ -8,10 +8,11 @@
 
   .field
     = f.label :theme
-    // f.select :title
+    = f.options_for_select([['Default', 1], ['Shakespeare', 2], ['Quoth the Raven', 3]], 3)
+ 
   .field
     = f.label :time_zone
-    = f.time_zone_select( "user", "time_zone", nil, include_blank: true)
+    = f.time_zone_select(:preference, :time_zone, nil, include_blank: true)
 
   .actions
     = f.submit 'Save'
