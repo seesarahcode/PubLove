@@ -51,6 +51,7 @@ class User < ActiveRecord::Base
 
   def create_preferences
     Preference.create(user_id: self.id)
+    # To-do: add default time zone and theme
   end
 
   def create_account
