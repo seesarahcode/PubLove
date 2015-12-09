@@ -9,6 +9,7 @@ class UserAccountController < ApplicationController
   end
 
   def update
+  	redirect_to user_account_path(current_user)
   end
 
   private
