@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Preference do
   before do 
   	@user = FactoryGirl.create(:project_manager)
-  	@preferences = FactoryGirl.create(:preference, user_id: @user.id)
+  	@preferences = @user.preferences
   end
   describe "responses" do
   	subject { @preferences }

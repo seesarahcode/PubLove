@@ -30,7 +30,7 @@ describe UserAccountController do
         expect(response.status).to eq 302
       end
       it "should redirect to the updated user_account page" do
-        #response.should redirect_to(@user_profile)
+        response.should redirect_to(user_account_path(@user))
       end
     end
   end
