@@ -1,9 +1,9 @@
-= form_for @preferences do |f|
-  - if @preferences.errors.any?
+= form_for @user.preferences do |f|
+  - if @user.preferences.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@preferences.errors.count, "error")} prohibited this preference from being saved:"
+      %h2= "#{pluralize(@user.preferences.errors.count, "error")} prohibited this preference from being saved:"
       %ul
-        - @preferences.errors.full_messages.each do |msg|
+        - @user.preferences.errors.full_messages.each do |msg|
           %li= msg
 
   .field

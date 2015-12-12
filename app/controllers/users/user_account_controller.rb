@@ -10,7 +10,7 @@ class UserAccountController < ApplicationController
 
   def update
   	respond_to do |format|
-      if @preferences.update_attributes(user_account_params)
+      if @user.preferences.update_attributes(user_account_params)
         format.html { redirect_to user_account_path(current_user), notice: 'Account was successfully updated.' }
       else
         format.html do
