@@ -12,7 +12,7 @@
  
   .field
     = f.label :time_zone
-    = f.time_zone_select(:preference, :time_zone, nil, include_blank: true)
+    = f.time_zone_select(:time_zone, TimeZone.us_zones, include_blank: true)
 
   .actions
     = f.submit 'Save'
