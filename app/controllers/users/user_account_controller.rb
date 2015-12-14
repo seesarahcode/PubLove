@@ -1,4 +1,4 @@
-class UserAccountController < ApplicationController
+class UserPreferencesController < ApplicationController
 
 	before_action :set_user_and_preferences
 

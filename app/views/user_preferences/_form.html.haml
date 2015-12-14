@@ -1,4 +1,4 @@
-= form_for @user.preferences do |f|
+= form_for @preferences do |f|
   - if @user.preferences.errors.any?
     #error_explanation
       %h2= "#{pluralize(@user.preferences.errors.count, "error")} prohibited this preference from being saved:"
