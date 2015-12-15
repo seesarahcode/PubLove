@@ -1,8 +1,7 @@
 require 'spec_helper'
 
-describe UserAccountController do
-
-  before do
+describe PreferencesController do
+	before do
     @admin = FactoryGirl.create(:admin)
     @user = FactoryGirl.create(:project_manager, publisher_id: @admin.publisher_id)
     @preferences = @user.preferences
@@ -11,7 +10,7 @@ describe UserAccountController do
 
   describe "GET show" do
     before :each do
-      get :show, id: @user.id
+      get :show, id: @preferences.id
     end
     it "should respond with success" do
       expect(response.status).to eq 200
@@ -24,15 +23,14 @@ describe UserAccountController do
   describe "PUT /update" do
     context "with valid parameters" do
       before :each do
-        put :update, id: @user.id, preferences: { theme: "Quoth the Raven" }
+        put :update, id: @preferences.id, theme: "Quoth the Raven"
       end
       it "should respond with success" do
         expect(response.status).to eq 302
       end
       it "should redirect to the updated user_account page" do
-        response.should redirect_to(user_account_path(@user))
+        response.should redirect_to(preference_path(@preferences))
       end
     end
   end
-
 end

@@ -1,9 +1,9 @@
 = form_for @preferences do |f|
-  - if @user.preferences.errors.any?
+  - if @preferences.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@user.preferences.errors.count, "error")} prohibited this preference from being saved:"
+      %h2= "#{pluralize(@preferences.errors.count, "error")} prohibited this preference from being saved:"
       %ul
-        - @user.preferences.errors.full_messages.each do |msg|
+        - @preferences.errors.full_messages.each do |msg|
           %li= msg
 
   .field
@@ -14,5 +14,6 @@
     = f.label :time_zone
     = f.time_zone_select(:time_zone, TimeZone.us_zones, include_blank: true)
 
+    = f.hidden_field :preferences, value: @preferences.id
   .actions
     = f.submit 'Save'
