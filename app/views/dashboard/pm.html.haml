@@ -34,7 +34,7 @@
 				.today
 					%h3 Today
 					-@events.each do |event|
-						= event.time.in_time_zone(current_user.preference.time_zone).strftime( 
+						= event.time.in_time_zone(current_user.preference.time_zone).strftime("%b")
 						= event.event_type 
 						with
 						= event_attendee_names(event)
