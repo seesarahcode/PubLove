@@ -1,19 +1,18 @@
 = form_for @preferences do |f|
-  - if @preferences.errors.any?
+  - if @user.preferences.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@preferences.errors.count, "error")} prohibited this preference from being saved:"
+      %h2= "#{pluralize(@user.preferences.errors.count, "error")} prohibited this preference from being saved:"
       %ul
-        - @preferences.errors.full_messages.each do |msg|
+        - @user.preferences.errors.full_messages.each do |msg|
           %li= msg
 
   .field
     = f.label :theme
-    = f.options_for_select([['Default', 1], ['Shakespeare', 2], ['Quoth the Raven', 3]], 3)
+    = f.select :theme, options_for_select([['Default', 1], ['Shakespeare', 2], ['Quoth the Raven', 3]], 3)
  
   .field
     = f.label :time_zone
-    = f.time_zone_select(:time_zone, TimeZone.us_zones, include_blank: true)
+    = f.time_zone_select(:time_zone, ActiveSupport::TimeZone.us_zones, include_blank: true)
 
-    = f.hidden_field :preferences, value: @preferences.id
   .actions
     = f.submit 'Save'
