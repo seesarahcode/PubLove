@@ -34,13 +34,13 @@ describe PreferencesController do
     end
     context "with invalid parameters" do
       before :each do
-        put :update, id: nil, theme: "Shakespeare"
+        put :update, id: @preferences.id, theme: 147
       end
       it "should redirect to the edit page" do
-        pending
+        response.should redirect_to(edit_preference_path(@preferences))
       end
       it "should flash that the account couldn't be updated" do
-        pending
+        expect(flash[:notice]).to be_present
       end
     end
   end
