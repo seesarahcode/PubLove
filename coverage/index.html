@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-22T23:51:26-08:00">2015-12-22T23:51:26-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-23T00:00:25-08:00">2015-12-23T00:00:25-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -2049,13 +2049,13 @@
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">          flash[:notice] = &quot;Account could not be updated.&quot;</code>
+          <code class="ruby">          redirect_to edit_preference_path(@preferences)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="17">
           
           
-          <code class="ruby">          render :edit</code>
+          <code class="ruby">          flash[:notice] = &quot;Account could not be updated.&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -9153,7 +9153,7 @@
         <li class="covered" data-hits="2" data-linenumber="37">
           <span class="hits">2</span>
           
-          <code class="ruby">        put :update, id: @preferences.id, theme: 147</code>
+          <code class="ruby">        put :update, id: @preferences.id, bad: &quot;params&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">

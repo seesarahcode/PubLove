@@ -34,7 +34,7 @@ describe PreferencesController do
     end
     context "with invalid parameters" do
       before :each do
-        put :update, id: @preferences.id, theme: 147
+        put :update, id: @preferences.id, bad: "params"
       end
       it "should redirect to the edit page" do
         response.should redirect_to(edit_preference_path(@preferences))

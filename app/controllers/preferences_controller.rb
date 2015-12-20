@@ -13,8 +13,8 @@ class PreferencesController < ApplicationController
         format.html { redirect_to preference_path(@preferences), notice: 'Account was successfully updated.' }
       else
         format.html do
+          redirect_to edit_preference_path(@preferences)
           flash[:notice] = "Account could not be updated."
-          render :edit
         end
         format.json { render json: @preferences.errors, status: :unprocessable_entity }
       end
