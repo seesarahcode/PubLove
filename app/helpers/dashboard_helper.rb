@@ -17,4 +17,11 @@ module DashboardHelper
 		names.join(", ")
 	end
 
+	def date_heat(day)
+		# create a date object from current month and day
+		# find events that match that date and count them
+		# set heat-class-level (0 events == white, 10 events = dark red)
+		# return %div.date.[heat-class-level]
+	end
+
 end

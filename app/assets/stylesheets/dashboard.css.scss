@@ -38,16 +38,16 @@
 	}
 	.month-days {
 		line-height: 35px;
+		margin-left: 4px;
 		width: 100%;
 		.date-blank {
 			display: inline-flex;
-			margin-right: 4px;
 			width: 24px;
 		}
 		.date {
 			display: inline-flex;
-			padding-left: 8px;
-			text-align: right;
+			padding-left: 4px;
+			text-align: center;
 			width: 24px;
 		}
 		.date:nth-child(7):after {
