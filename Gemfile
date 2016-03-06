@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Use
 # Use HAML for HTML
 gem 'haml-rails', '~> 0.9'
 # Use SCSS for stylesheets
@@ -16,7 +17,8 @@ gem 'devise'
 gem 'wicked'
 
 
-group :development, :test do 
+group :development, :test do
+	gem 'thin'
 	gem 'database_cleaner'
 	gem 'rspec-rails'
 	gem 'simplecov'
