@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sarah/Bibliateq/config/environment.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/sarah/Bibliateq/config/application.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/application.rb": [
         1,
         null,
         1,
@@ -37,13 +37,13 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/boot.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/sarah/Bibliateq/config/environments/test.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/environments/test.rb": [
         1,
         null,
         null,
@@ -84,7 +84,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/initializers/assets.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -94,7 +94,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/initializers/backtrace_silencers.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -103,12 +103,12 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/initializers/cookies_serializer.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/sarah/Bibliateq/config/initializers/devise.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -369,13 +369,13 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/initializers/filter_parameter_logging.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/sarah/Bibliateq/config/initializers/inflections.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -393,18 +393,18 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/initializers/mime_types.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/initializers/session_store.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/sarah/Bibliateq/config/initializers/wrap_parameters.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -420,7 +420,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/config/routes.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/config/routes.rb": [
         1,
         null,
         null,
@@ -500,7 +500,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/user.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/user.rb": [
         1,
         null,
         null,
@@ -574,7 +574,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/helpers/application_helper.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/helpers/application_helper.rb": [
         1,
         null,
         1,
@@ -605,11 +605,11 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/helpers/books_helper.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/helpers/books_helper.rb": [
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/app/helpers/dashboard_helper.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/helpers/dashboard_helper.rb": [
         1,
         null,
         1,
@@ -629,21 +629,28 @@
         2,
         null,
         null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/helpers/home_helper.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/app/helpers/preferences_helper.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/helpers/preferences_helper.rb": [
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/app/helpers/publishers_helper.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/helpers/publishers_helper.rb": [
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/account.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/account.rb": [
         1,
         1,
         1,
@@ -651,20 +658,20 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/book_author.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/book_author.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/book_teams.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/book_teams.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/books.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/books.rb": [
         1,
         1,
         1,
@@ -674,13 +681,13 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/event_attendees.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/event_attendees.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/events.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/events.rb": [
         1,
         1,
         1,
@@ -704,36 +711,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/imprints.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/sarah/Bibliateq/spec/factories/notifications.rb": [
-        1,
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/imprints.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/preferences.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/sarah/Bibliateq/spec/factories/publishers.rb": [
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/notifications.rb": [
         1,
         1,
         1,
@@ -741,7 +726,18 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/tasks.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/preferences.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/publishers.rb": [
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -752,14 +748,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/team_roles.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/sarah/Bibliateq/spec/factories/user_profiles.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/tasks.rb": [
         1,
         1,
         1,
@@ -770,7 +759,25 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/factories/users.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/team_roles.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/user_profiles.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/sarahwheeler/Periphery/PubLove/spec/factories/users.rb": [
         1,
         1,
         357,
@@ -807,7 +814,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/support/database_cleaner.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/support/database_cleaner.rb": [
         1,
         null,
         1,
@@ -834,7 +841,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/support/devise_support.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/support/devise_support.rb": [
         null,
         1,
         null,
@@ -847,7 +854,7 @@
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/application_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -888,7 +895,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/books_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/books_controller_spec.rb": [
         1,
         null,
         1,
@@ -1032,7 +1039,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/books_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/books_controller.rb": [
         1,
         1,
         1,
@@ -1118,7 +1125,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/dashboard_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/dashboard_controller_spec.rb": [
         1,
         null,
         1,
@@ -1173,7 +1180,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/dashboard_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/dashboard_controller.rb": [
         1,
         1,
         null,
@@ -1202,7 +1209,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/home_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/home_controller_spec.rb": [
         1,
         null,
         1,
@@ -1218,13 +1225,13 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/home_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/home_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/preferences_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/preferences_controller_spec.rb": [
         1,
         null,
         1,
@@ -1273,7 +1280,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/preferences_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/preferences_controller.rb": [
         1,
         1,
         null,
@@ -1309,7 +1316,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/publishers_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/publishers_controller_spec.rb": [
         1,
         null,
         1,
@@ -1413,7 +1420,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/publishers_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/publishers_controller.rb": [
         1,
         1,
         null,
@@ -1468,14 +1475,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/registrations_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/registrations_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/registrations_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/registrations_controller.rb": [
         1,
         null,
         1,
@@ -1485,7 +1492,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/controllers/user_profiles_controller_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/controllers/user_profiles_controller_spec.rb": [
         1,
         null,
         1,
@@ -1528,7 +1535,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/user_profiles_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/user_profiles_controller.rb": [
         1,
         1,
         null,
@@ -1560,7 +1567,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/helpers/application_helper_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/helpers/application_helper_spec.rb": [
         1,
         null,
         1,
@@ -1619,7 +1626,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/helpers/dashboard_helper_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/helpers/dashboard_helper_spec.rb": [
         1,
         null,
         1,
@@ -1671,7 +1678,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/helpers/preferences_helper_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/helpers/preferences_helper_spec.rb": [
         1,
         null,
         null,
@@ -1688,7 +1695,7 @@
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/account_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/account_spec.rb": [
         1,
         null,
         1,
@@ -1724,13 +1731,13 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/account.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/account.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/book_authors_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/book_authors_spec.rb": [
         1,
         null,
         1,
@@ -1763,7 +1770,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/book_author.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/book_author.rb": [
         1,
         1,
         1,
@@ -1771,7 +1778,7 @@
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/book_team_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/book_team_spec.rb": [
         1,
         null,
         1,
@@ -1801,14 +1808,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/book_team.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/book_team.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/books_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/books_spec.rb": [
         1,
         null,
         1,
@@ -1874,7 +1881,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/book.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/book.rb": [
         1,
         null,
         1,
@@ -1888,7 +1895,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/event_attendee_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/event_attendee_spec.rb": [
         1,
         null,
         1,
@@ -1917,14 +1924,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/event_attendee.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/event_attendee.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/event_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/event_spec.rb": [
         1,
         null,
         1,
@@ -1979,14 +1986,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/event.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/event.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/imprint_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/imprint_spec.rb": [
         1,
         null,
         1,
@@ -2008,14 +2015,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/imprint.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/imprint.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/notification_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/notification_spec.rb": [
         1,
         null,
         1,
@@ -2042,14 +2049,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/notification.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/notification.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/preference_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/preference_spec.rb": [
         1,
         null,
         1,
@@ -2082,7 +2089,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/preference.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/preference.rb": [
         1,
         1,
         1,
@@ -2090,7 +2097,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/publisher_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/publisher_spec.rb": [
         1,
         null,
         1,
@@ -2162,7 +2169,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/publisher.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/publisher.rb": [
         1,
         null,
         1,
@@ -2176,7 +2183,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/task_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/task_spec.rb": [
         1,
         null,
         1,
@@ -2220,14 +2227,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/task.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/task.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/team_role_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/team_role_spec.rb": [
         1,
         null,
         1,
@@ -2254,14 +2261,25 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/team_role.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/team_role.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/user_profile_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/theme_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/theme.rb": [
+        1,
+        null
+      ],
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/user_profile_spec.rb": [
         1,
         null,
         1,
@@ -2299,14 +2317,14 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/models/user_profile.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/models/user_profile.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/models/users_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/models/users_spec.rb": [
         1,
         null,
         1,
@@ -2511,7 +2529,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/requests/registration_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/requests/registration_spec.rb": [
         1,
         null,
         1,
@@ -2568,7 +2586,7 @@
         1,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/requests/session_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/requests/session_spec.rb": [
         1,
         null,
         1,
@@ -2655,7 +2673,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/requests/user_steps_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/requests/user_steps_spec.rb": [
         1,
         null,
         1,
@@ -2691,7 +2709,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/routing/publishers_routing_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/routing/publishers_routing_spec.rb": [
         1,
         null,
         1,
@@ -2728,7 +2746,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/spec/routing/user_profiles_routing_spec.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/spec/routing/user_profiles_routing_spec.rb": [
         1,
         null,
         1,
@@ -2757,7 +2775,7 @@
         null,
         null
       ],
-      "/Users/sarah/Bibliateq/app/controllers/user_steps_controller.rb": [
+      "/Users/sarahwheeler/Periphery/PubLove/app/controllers/user_steps_controller.rb": [
         1,
         1,
         null,
@@ -2783,6 +2801,6 @@
         null
       ]
     },
-    "timestamp": 1450857625
+    "timestamp": 1457234121
   }
 }
