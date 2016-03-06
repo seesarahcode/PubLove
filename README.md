@@ -1,4 +1,5 @@
 # PubLove
+[![Build Status](https://travis-ci.org/seesarahcode/PubLove.png)](https://travis-ci.org/seesarahcode/PubLove)
 
 PubLove is an integrated client and project management application designed to make it easy for publishers
 
