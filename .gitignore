@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore specific ruby versions and gemsets
+.ruby-version
+.ruby-gemset
