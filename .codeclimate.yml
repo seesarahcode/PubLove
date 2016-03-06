@@ -1,5 +1,4 @@
 exclude_paths:
 - coverage/**/*
-- Gemfile.lock
 - tests/**/*
 - spec/**/*
