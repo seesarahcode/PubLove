@@ -18,7 +18,8 @@ module DashboardHelper
 	end
 
 	def date_heat(day)
-		# create a date object from current month and day
+		date
+		events = Event.where(created_at: date.beginning_of_day..date.end_of_day)
 		# find events that match that date and count them
 		# set heat-class-level (0 events == white, 10 events = dark red)
 		# return %div.date.[heat-class-level]
