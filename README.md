@@ -1,5 +1,7 @@
 # PubLove
 [![Build Status](https://travis-ci.org/seesarahcode/PubLove.png)](https://travis-ci.org/seesarahcode/PubLove)
+[![codecov.io](https://codecov.io/github/seesarahcode/PubLove/coverage.svg?branch=master)](https://codecov.io/github/seesarahcode/PubLove?branch=master)
+[![Code Climate](https://codeclimate.com/github/seesarahcode/PubLove.svg)](https://codeclimate.com/github/seesarahcode/Publove)
 
 PubLove is an integrated client and project management application designed to make it easy for publishers
 
