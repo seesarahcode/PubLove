@@ -3,4 +3,4 @@ rvm:
 - 2.3.0
 
 sudo: false
-script: bundle exec rspec
+script: bundle exec rspec; bin/rake db:create db:migrate
