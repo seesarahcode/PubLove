@@ -56,6 +56,8 @@ GEM
       xpath (~> 2.0)
     childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
+    codeclimate-test-reporter (0.5.0)
+      simplecov (>= 0.7.1, < 1.0.0)
     codecov (0.1.4)
       json
       simplecov
@@ -266,6 +268,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.3.5)
   capybara
+  codeclimate-test-reporter
   codecov
   database_cleaner
   devise

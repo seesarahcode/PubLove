@@ -21,6 +21,7 @@ group :development, :test do
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'capybara'
+	gem "codeclimate-test-reporter", require: nil
 	gem 'codecov', :require => false
 	gem 'database_cleaner'
 	gem 'factory_girl_rails', require: false
