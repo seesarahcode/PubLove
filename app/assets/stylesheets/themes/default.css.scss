@@ -1,7 +1,7 @@
 // Colors
 
 $lightTeal: #7fc5c5;
-$yellow: #f8ce4c;
+$yellow: #f9d76f;
 $lightYellow: #fbe296;
 $darkTeal: #003737;
 
@@ -16,8 +16,8 @@ $darkTeal: #003737;
 		}
 	}
 	// Dropdown li
-	.navbar-default .navbar-nav > .open > a, 
-	.navbar-default .navbar-nav > .open > a:hover, 
+	.navbar-default .navbar-nav > .open > a,
+	.navbar-default .navbar-nav > .open > a:hover,
 	.navbar-default .navbar-nav > .open > a:focus {
 		background-color: $lightYellow !important;
 	}
