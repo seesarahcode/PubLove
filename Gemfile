@@ -29,7 +29,7 @@ group :development, :test do
 	gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
 	gem 'pry'	# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-	gem 'rspec-rails'
+	gem 'rspec-rails', '2.14.1'
 	gem 'rubocop', require: false
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'simplecov'
